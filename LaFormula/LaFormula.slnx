@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="CadLaFormula/CadLaFormula.csproj" />
+  <Project Path="ClnLaFormula/ClnLaFormula.csproj" />
+  <Project Path="CpLaFormula/CpLaFormula.csproj" />
+</Solution>
