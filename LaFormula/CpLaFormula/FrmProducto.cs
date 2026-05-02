@@ -20,7 +20,7 @@ namespace CpLaFormula
 
         private void FrmProducto_Load(object sender, EventArgs e)
         {
-            dgvLista.DataSource = ProductoCln.listarPa("");
+            dgvLista.DataSource = ProductoCln.listarPorParametro(""); // ← listarPa lo Cambie pq salie Error
         }
     }
 }

@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="CadLaFormula/CadLaFormula.csproj" />
-  <Project Path="ClnLaFormula/ClnLaFormula.csproj" />
-  <Project Path="CpLaFormula/CpLaFormula.csproj" />
+  <Project Path="CadLaFormula/CadLaFormula.csproj" Id="b54b1ce9-d49e-4df8-ac09-d6bbb2d48729" />
+  <Project Path="ClnLaFormula/ClnLaFormula.csproj" Id="97fdc24f-c3ef-4459-be36-d62ebbfa421f" />
+  <Project Path="CpLaFormula/CpLaFormula.csproj" Id="7536b9e9-6c39-42f0-9f6c-a9a96f56145e" />
 </Solution>
