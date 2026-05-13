@@ -36,12 +36,12 @@
             this.ribbonQat1 = new C1.Win.Ribbon.RibbonQat();
             this.ribbonTab1 = new C1.Win.Ribbon.RibbonTab();
             this.ribbonGroup1 = new C1.Win.Ribbon.RibbonGroup();
+            this.btnInProducto = new C1.Win.Ribbon.RibbonButton();
             this.ribbonTab2 = new C1.Win.Ribbon.RibbonTab();
             this.ribbonGroup2 = new C1.Win.Ribbon.RibbonGroup();
+            this.btnAdEmpleados = new C1.Win.Ribbon.RibbonButton();
             this.ribbonTopToolBar1 = new C1.Win.Ribbon.RibbonTopToolBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnInProducto = new C1.Win.Ribbon.RibbonButton();
-            this.btnAdEmpleados = new C1.Win.Ribbon.RibbonButton();
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +89,15 @@
             this.ribbonGroup1.Name = "ribbonGroup1";
             this.ribbonGroup1.Text = "Gestion de Catálogo o Paramétricas";
             // 
+            // btnInProducto
+            // 
+            this.btnInProducto.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
+            this.btnInProducto.IconSet.Add(new C1.Framework.C1BitmapIcon(null, new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, ((System.Drawing.Image)(resources.GetObject("btnInProducto.IconSet")))));
+            this.btnInProducto.Name = "btnInProducto";
+            this.btnInProducto.Text = "Productos";
+            this.btnInProducto.ToolTip = "Gestión de productos";
+            this.btnInProducto.Click += new System.EventHandler(this.btnInProducto_Click);
+            // 
             // ribbonTab2
             // 
             this.ribbonTab2.Groups.Add(this.ribbonGroup2);
@@ -100,6 +109,15 @@
             this.ribbonGroup2.Items.Add(this.btnAdEmpleados);
             this.ribbonGroup2.Name = "ribbonGroup2";
             this.ribbonGroup2.Text = "Gestion de Usurios";
+            // 
+            // btnAdEmpleados
+            // 
+            this.btnAdEmpleados.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
+            this.btnAdEmpleados.IconSet.Add(new C1.Framework.C1BitmapIcon(null, new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, ((System.Drawing.Image)(resources.GetObject("btnAdEmpleados.IconSet")))));
+            this.btnAdEmpleados.Name = "btnAdEmpleados";
+            this.btnAdEmpleados.Text = "Empleados";
+            this.btnAdEmpleados.ToolTip = "Gestión de empleados";
+            this.btnAdEmpleados.Click += new System.EventHandler(this.btnAdEmpleados_Click);
             // 
             // ribbonTopToolBar1
             // 
@@ -116,24 +134,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // btnInProducto
-            // 
-            this.btnInProducto.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
-            this.btnInProducto.IconSet.Add(new C1.Framework.C1BitmapIcon(null, new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, ((System.Drawing.Image)(resources.GetObject("btnInProducto.IconSet")))));
-            this.btnInProducto.Name = "btnInProducto";
-            this.btnInProducto.Text = "Productos";
-            this.btnInProducto.ToolTip = "Gestión de productos";
-            this.btnInProducto.Click += new System.EventHandler(this.btnInProducto_Click);
-            // 
-            // btnAdEmpleados
-            // 
-            this.btnAdEmpleados.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
-            this.btnAdEmpleados.IconSet.Add(new C1.Framework.C1BitmapIcon(null, new System.Drawing.Size(32, 32), System.Drawing.Color.Transparent, ((System.Drawing.Image)(resources.GetObject("btnAdEmpleados.IconSet")))));
-            this.btnAdEmpleados.Name = "btnAdEmpleados";
-            this.btnAdEmpleados.Text = "Empleados";
-            this.btnAdEmpleados.ToolTip = "Gestión de empleados";
-            this.btnAdEmpleados.Click += new System.EventHandler(this.btnAdEmpleados_Click);
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -147,6 +147,7 @@
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrincipal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).EndInit();

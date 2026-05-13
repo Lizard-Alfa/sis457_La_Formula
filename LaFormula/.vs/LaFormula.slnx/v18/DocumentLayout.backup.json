@@ -7,18 +7,15 @@
       "RelativeMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|solutionrelative:cplaformula\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|e:\\informatica\\2026_1\\sis457_fundamentos_programacion\\proyecto_sis_457\\sis457_la_formula\\laformula\\cplaformula\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|E:\\Informatica\\2026_1\\sis457_Fundamentos_Programacion\\Proyecto_sis_457\\sis457_La_Formula\\LaFormula\\cplaformula\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|solutionrelative:cplaformula\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Informatica\\2026_1\\sis457_Fundamentos_Programacion\\basedetosLaformula\\ddl_dml_La_Formula.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|e:\\informatica\\2026_1\\sis457_fundamentos_programacion\\proyecto_sis_457\\sis457_la_formula\\laformula\\cplaformula\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|E:\\Informatica\\2026_1\\sis457_Fundamentos_Programacion\\Proyecto_sis_457\\sis457_La_Formula\\LaFormula\\cplaformula\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|solutionrelative:cplaformula\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Informatica\\2026_1\\sis457_Fundamentos_Programacion\\basedetosLaformula\\ddl_dml_La_Formula.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,8 +37,7 @@
               "RelativeToolTip": "CpLaFormula\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T01:19:30.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T01:19:30.044Z"
             },
             {
               "$type": "Document",
@@ -71,10 +67,10 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ddl_dml_La_Formula.sql ",
+              "Title": "ddl_dml_La_Formula.sql",
               "DocumentMoniker": "E:\\Informatica\\2026_1\\sis457_Fundamentos_Programacion\\basedetosLaformula\\ddl_dml_La_Formula.sql",
               "RelativeDocumentMoniker": "..\\..\\..\\basedetosLaformula\\ddl_dml_La_Formula.sql",
-              "ToolTip": "ddl_dml_La_Formula.sql ",
+              "ToolTip": "ddl_dml_La_Formula.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
               "WhenOpened": "2026-05-08T01:10:58.833Z",
               "EditorCaption": ""
