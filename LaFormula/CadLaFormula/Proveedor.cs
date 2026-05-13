@@ -35,7 +35,7 @@ public partial class Proveedor
 
     public string direccion { get; set; }
 
-    public Nullable<long> celular { get; set; }
+    public string celular { get; set; }
 
     public string representante { get; set; }
 

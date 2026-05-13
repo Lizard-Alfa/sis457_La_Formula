@@ -39,7 +39,7 @@ public partial class Cliente
 
     public string direccion { get; set; }
 
-    public long celular { get; set; }
+    public string celular { get; set; }
 
     public string email { get; set; }
 

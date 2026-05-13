@@ -22,9 +22,9 @@ public partial class Producto
     public Producto()
     {
 
-        this.CompraDetalle = new HashSet<CompraDetalle>();
-
         this.VentaDetalle = new HashSet<VentaDetalle>();
+
+        this.CompraDetalle = new HashSet<CompraDetalle>();
 
     }
 
@@ -61,15 +61,15 @@ public partial class Producto
 
     public virtual Categoria Categoria { get; set; }
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
-    public virtual ICollection<CompraDetalle> CompraDetalle { get; set; }
-
     public virtual UnidadMedida UnidadMedida { get; set; }
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 
     public virtual ICollection<VentaDetalle> VentaDetalle { get; set; }
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
+    public virtual ICollection<CompraDetalle> CompraDetalle { get; set; }
 
 }
 

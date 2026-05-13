@@ -41,7 +41,7 @@ public partial class Empleado
 
     public string direccion { get; set; }
 
-    public long celular { get; set; }
+    public string celular { get; set; }
 
     public string cargo { get; set; }
 

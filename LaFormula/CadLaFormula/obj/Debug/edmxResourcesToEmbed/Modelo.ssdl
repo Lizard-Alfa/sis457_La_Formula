@@ -20,7 +20,7 @@
     <Property Name="primerApellido" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="segundoApellido" Type="varchar" MaxLength="50" />
     <Property Name="direccion" Type="varchar" MaxLength="250" Nullable="false" />
-    <Property Name="celular" Type="bigint" Nullable="false" />
+    <Property Name="celular" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
@@ -64,7 +64,7 @@
     <Property Name="segundoApellido" Type="varchar" MaxLength="50" />
     <Property Name="fechaNacimiento" Type="date" Nullable="false" />
     <Property Name="direccion" Type="varchar" MaxLength="250" Nullable="false" />
-    <Property Name="celular" Type="bigint" Nullable="false" />
+    <Property Name="celular" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="cargo" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
@@ -97,7 +97,7 @@
     <Property Name="nit" Type="bigint" Nullable="false" />
     <Property Name="razonSocial" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="direccion" Type="varchar" MaxLength="250" />
-    <Property Name="celular" Type="bigint" />
+    <Property Name="celular" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="representante" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
@@ -272,8 +272,76 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="paEmpleadoActualizar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="cedulaIdentidad" Type="varchar" Mode="In" />
+    <Parameter Name="nombres" Type="varchar" Mode="In" />
+    <Parameter Name="primerApellido" Type="varchar" Mode="In" />
+    <Parameter Name="segundoApellido" Type="varchar" Mode="In" />
+    <Parameter Name="fechaNacimiento" Type="date" Mode="In" />
+    <Parameter Name="direccion" Type="varchar" Mode="In" />
+    <Parameter Name="celular" Type="varchar" Mode="In" />
+    <Parameter Name="cargo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paEmpleadoCrear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cedulaIdentidad" Type="varchar" Mode="In" />
+    <Parameter Name="nombres" Type="varchar" Mode="In" />
+    <Parameter Name="primerApellido" Type="varchar" Mode="In" />
+    <Parameter Name="segundoApellido" Type="varchar" Mode="In" />
+    <Parameter Name="fechaNacimiento" Type="date" Mode="In" />
+    <Parameter Name="direccion" Type="varchar" Mode="In" />
+    <Parameter Name="celular" Type="varchar" Mode="In" />
+    <Parameter Name="cargo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paEmpleadoEliminarLogico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paEmpleadoListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="parametro" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paEmpleadoObtenerPorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usuario" Type="varchar" Mode="In" />
+    <Parameter Name="clave" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paProductoActualizar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="idUnidadMedida" Type="int" Mode="In" />
+    <Parameter Name="idCategoria" Type="int" Mode="In" />
+    <Parameter Name="codigo" Type="varchar" Mode="In" />
+    <Parameter Name="descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="marca" Type="varchar" Mode="In" />
+    <Parameter Name="ubicacionBodega" Type="varchar" Mode="In" />
+    <Parameter Name="saldo" Type="decimal" Mode="In" />
+    <Parameter Name="precioVenta" Type="decimal" Mode="In" />
+    <Parameter Name="factor" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="paProductoCrear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idUnidadMedida" Type="int" Mode="In" />
+    <Parameter Name="idCategoria" Type="int" Mode="In" />
+    <Parameter Name="codigo" Type="varchar" Mode="In" />
+    <Parameter Name="descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="marca" Type="varchar" Mode="In" />
+    <Parameter Name="ubicacionBodega" Type="varchar" Mode="In" />
+    <Parameter Name="saldo" Type="decimal" Mode="In" />
+    <Parameter Name="precioVenta" Type="decimal" Mode="In" />
+    <Parameter Name="factor" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="paProductoEliminarLogico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
   <Function Name="paProductoListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="parametro" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paProductoObtenerPorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paVentaRegistrar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCliente" Type="int" Mode="In" />
+    <Parameter Name="idUsuario" Type="int" Mode="In" />
+    <Parameter Name="detalles" Type="nvarchar(max)" Mode="In" />
   </Function>
   <EntityContainer Name="LabLaFormulaModelStoreContainer">
     <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />

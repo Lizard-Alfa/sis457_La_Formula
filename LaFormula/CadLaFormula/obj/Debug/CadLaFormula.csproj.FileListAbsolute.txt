@@ -10,15 +10,3 @@ E:\Informatica\2026_1\sis457_Fundamentos_Programacion\Proyecto_sis_457\sis457_La
 E:\Informatica\2026_1\sis457_Fundamentos_Programacion\Proyecto_sis_457\sis457_La_Formula\LaFormula\CadLaFormula\obj\Debug\CadLaFor.B6429397.Up2Date
 E:\Informatica\2026_1\sis457_Fundamentos_Programacion\Proyecto_sis_457\sis457_La_Formula\LaFormula\CadLaFormula\obj\Debug\CadLaFormula.dll
 E:\Informatica\2026_1\sis457_Fundamentos_Programacion\Proyecto_sis_457\sis457_La_Formula\LaFormula\CadLaFormula\obj\Debug\CadLaFormula.pdb
-C:\ZyZ\sis457_2026\sis457_La_Formula\LaFormula\CadLaFormula\bin\Debug\CadLaFormula.dll.config
-C:\ZyZ\sis457_2026\sis457_La_Formula\LaFormula\CadLaFormula\bin\Debug\CadLaFormula.dll
-C:\ZyZ\sis457_2026\sis457_La_Formula\LaFormula\CadLaFormula\bin\Debug\CadLaFormula.pdb
-C:\ZyZ\sis457_2026\sis457_La_Formula\LaFormula\CadLaFormula\bin\Debug\EntityFramework.dll
-C:\ZyZ\sis457_2026\sis457_La_Formula\LaFormula\CadLaFormula\bin\Debug\EntityFramework.SqlServer.dll
-C:\ZyZ\sis457_2026\sis457_La_Formula\LaFormula\CadLaFormula\bin\Debug\EntityFramework.xml
-C:\ZyZ\sis457_2026\sis457_La_Formula\LaFormula\CadLaFormula\bin\Debug\EntityFramework.SqlServer.xml
-C:\ZyZ\sis457_2026\sis457_La_Formula\LaFormula\CadLaFormula\obj\Debug\CadLaFormula.csproj.AssemblyReference.cache
-C:\ZyZ\sis457_2026\sis457_La_Formula\LaFormula\CadLaFormula\obj\Debug\CadLaFormula.csproj.CoreCompileInputs.cache
-C:\ZyZ\sis457_2026\sis457_La_Formula\LaFormula\CadLaFormula\obj\Debug\CadLaFor.B6429397.Up2Date
-C:\ZyZ\sis457_2026\sis457_La_Formula\LaFormula\CadLaFormula\obj\Debug\CadLaFormula.dll
-C:\ZyZ\sis457_2026\sis457_La_Formula\LaFormula\CadLaFormula\obj\Debug\CadLaFormula.pdb

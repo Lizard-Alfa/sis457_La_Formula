@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'C:\ZyZ\sis457_2026\sis457_La_Formula\LaFormula\CadLaFormula\Modelo.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'E:\Informatica\2026_1\sis457_Fundamentos_Programacion\Proyecto_sis_457\sis457_La_Formula\LaFormula\CadLaFormula\Modelo.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

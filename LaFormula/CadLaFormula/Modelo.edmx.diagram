@@ -4,29 +4,29 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="79a48dddb1e5469f91dbf2f1a47a5da3" Name="Diagram1">
+      <Diagram DiagramId="79a48dddb1e5469f91dbf2f1a47a5da3" Name="Diagram1" ZoomLevel="77">
         <EntityTypeShape EntityType="LabLaFormulaModel.Categoria" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabLaFormulaModel.Cliente" Width="1.5" PointX="3.75" PointY="14" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabLaFormulaModel.Compra" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabLaFormulaModel.CompraDetalle" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabLaFormulaModel.Empleado" Width="1.5" PointX="1.5" PointY="18.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabLaFormulaModel.Producto" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabLaFormulaModel.Proveedor" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabLaFormulaModel.Empleado" PointX="3.25" PointY="7.75" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabLaFormulaModel.Producto" Width="1.5" PointX="4" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LabLaFormulaModel.UnidadMedida" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabLaFormulaModel.Usuario" Width="1.5" PointX="3.75" PointY="18.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabLaFormulaModel.Venta" Width="1.5" PointX="6" PointY="16.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabLaFormulaModel.VentaDetalle" Width="1.5" PointX="8.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabLaFormulaModel.Venta" Width="1.5" PointX="6.375" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabLaFormulaModel.VentaDetalle" Width="1.5" PointX="6.625" PointY="0.875" IsExpanded="true" />
         <AssociationConnector Association="LabLaFormulaModel.fk_Producto_Categoria" ManuallyRouted="false" />
-        <AssociationConnector Association="LabLaFormulaModel.fk_Venta_Cliente" ManuallyRouted="false" />
-        <AssociationConnector Association="LabLaFormulaModel.fk_Compra_Proveedor" ManuallyRouted="false" />
-        <AssociationConnector Association="LabLaFormulaModel.fk_CompraDetalle_Compra" ManuallyRouted="false" />
-        <AssociationConnector Association="LabLaFormulaModel.fk_CompraDetalle_Producto" ManuallyRouted="false" />
-        <AssociationConnector Association="LabLaFormulaModel.fk_Usuario_Empleado" ManuallyRouted="false" />
         <AssociationConnector Association="LabLaFormulaModel.fk_Producto_UnidadMedida" ManuallyRouted="false" />
         <AssociationConnector Association="LabLaFormulaModel.fk_VentaDetalle_Producto" ManuallyRouted="false" />
-        <AssociationConnector Association="LabLaFormulaModel.fk_Venta_Usuario" ManuallyRouted="false" />
         <AssociationConnector Association="LabLaFormulaModel.fk_VentaDetalle_Venta" ManuallyRouted="false" />
-      </Diagram>
+        <EntityTypeShape EntityType="LabLaFormulaModel.Cliente" PointX="3.625" PointY="12.625" Width="1.5" />
+        <EntityTypeShape EntityType="LabLaFormulaModel.Usuario" Width="1.5" PointX="5.5" PointY="9.125" />
+        <AssociationConnector Association="LabLaFormulaModel.fk_Venta_Cliente" />
+        <AssociationConnector Association="LabLaFormulaModel.fk_Usuario_Empleado" />
+        <AssociationConnector Association="LabLaFormulaModel.fk_Venta_Usuario" />
+        <EntityTypeShape EntityType="LabLaFormulaModel.Compra" Width="1.5" PointX="11.625" PointY="8" />
+        <EntityTypeShape EntityType="LabLaFormulaModel.CompraDetalle" Width="1.5" PointX="9.25" PointY="1.375" />
+        <EntityTypeShape EntityType="LabLaFormulaModel.Proveedor" Width="1.5" PointX="8.625" PointY="7.625" />
+        <AssociationConnector Association="LabLaFormulaModel.fk_Compra_Proveedor" />
+        <AssociationConnector Association="LabLaFormulaModel.fk_CompraDetalle_Compra" />
+        <AssociationConnector Association="LabLaFormulaModel.fk_CompraDetalle_Producto" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

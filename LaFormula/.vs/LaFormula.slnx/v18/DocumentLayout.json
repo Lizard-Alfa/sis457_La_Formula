@@ -1,18 +1,24 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\ZyZ\\sis457_2026\\sis457_La_Formula\\LaFormula\\",
+  "WorkspaceRootPath": "E:\\Informatica\\2026_1\\sis457_Fundamentos_Programacion\\Proyecto_sis_457\\sis457_La_Formula\\LaFormula\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|c:\\zyz\\sis457_2026\\sis457_la_formula\\laformula\\cplaformula\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|solutionrelative:cplaformula\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|e:\\informatica\\2026_1\\sis457_fundamentos_programacion\\proyecto_sis_457\\sis457_la_formula\\laformula\\cplaformula\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|solutionrelative:cplaformula\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|C:\\ZyZ\\sis457_2026\\sis457_La_Formula\\LaFormula\\cplaformula\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|solutionrelative:cplaformula\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|e:\\informatica\\2026_1\\sis457_fundamentos_programacion\\proyecto_sis_457\\sis457_la_formula\\laformula\\cplaformula\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|solutionrelative:cplaformula\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97FDC24F-C3EF-4459-BE36-D62EBBFA421F}|ClnLaFormula\\ClnLaFormula.csproj|C:\\ZyZ\\sis457_2026\\sis457_La_Formula\\LaFormula\\clnlaformula\\productocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97FDC24F-C3EF-4459-BE36-D62EBBFA421F}|ClnLaFormula\\ClnLaFormula.csproj|solutionrelative:clnlaformula\\productocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Informatica\\2026_1\\sis457_Fundamentos_Programacion\\basedetosLaformula\\ddl_dml_La_Formula.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|e:\\informatica\\2026_1\\sis457_fundamentos_programacion\\proyecto_sis_457\\sis457_la_formula\\laformula\\cplaformula\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7536B9E9-6C39-42F0-9F6C-A9A96F56145E}|CpLaFormula\\CpLaFormula.csproj|solutionrelative:cplaformula\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Informatica\\2026_1\\sis457_Fundamentos_Programacion\\basedetosLaformula\\ddl_dml_La_Formula.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,55 +28,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmProducto.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\ZyZ\\sis457_2026\\sis457_La_Formula\\LaFormula\\CpLaFormula\\FrmProducto.cs",
-              "RelativeDocumentMoniker": "CpLaFormula\\FrmProducto.cs",
-              "ToolTip": "C:\\ZyZ\\sis457_2026\\sis457_La_Formula\\LaFormula\\CpLaFormula\\FrmProducto.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CpLaFormula\\FrmProducto.cs [Dise\u00F1o]",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Informatica\\2026_1\\sis457_Fundamentos_Programacion\\Proyecto_sis_457\\sis457_La_Formula\\LaFormula\\CpLaFormula\\Program.cs",
+              "RelativeDocumentMoniker": "CpLaFormula\\Program.cs",
+              "ToolTip": "E:\\Informatica\\2026_1\\sis457_Fundamentos_Programacion\\Proyecto_sis_457\\sis457_La_Formula\\LaFormula\\CpLaFormula\\Program.cs",
+              "RelativeToolTip": "CpLaFormula\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T01:26:36.384Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-05-13T01:19:30.044Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FrmProducto.cs",
-              "DocumentMoniker": "C:\\ZyZ\\sis457_2026\\sis457_La_Formula\\LaFormula\\CpLaFormula\\FrmProducto.cs",
-              "RelativeDocumentMoniker": "CpLaFormula\\FrmProducto.cs",
-              "ToolTip": "C:\\ZyZ\\sis457_2026\\sis457_La_Formula\\LaFormula\\CpLaFormula\\FrmProducto.cs",
-              "RelativeToolTip": "CpLaFormula\\FrmProducto.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAuwBYAAABsAAAAAAAAAA==",
+              "Title": "FrmPrincipal.cs",
+              "DocumentMoniker": "E:\\Informatica\\2026_1\\sis457_Fundamentos_Programacion\\Proyecto_sis_457\\sis457_La_Formula\\LaFormula\\CpLaFormula\\FrmPrincipal.cs",
+              "RelativeDocumentMoniker": "CpLaFormula\\FrmPrincipal.cs",
+              "ToolTip": "E:\\Informatica\\2026_1\\sis457_Fundamentos_Programacion\\Proyecto_sis_457\\sis457_La_Formula\\LaFormula\\CpLaFormula\\FrmPrincipal.cs",
+              "RelativeToolTip": "CpLaFormula\\FrmPrincipal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T04:09:07.711Z"
+              "WhenOpened": "2026-05-13T01:16:59.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "E:\\Informatica\\2026_1\\sis457_Fundamentos_Programacion\\Proyecto_sis_457\\sis457_La_Formula\\LaFormula\\CpLaFormula\\FrmPrincipal.cs",
+              "RelativeDocumentMoniker": "CpLaFormula\\FrmPrincipal.cs",
+              "ToolTip": "E:\\Informatica\\2026_1\\sis457_Fundamentos_Programacion\\Proyecto_sis_457\\sis457_La_Formula\\LaFormula\\CpLaFormula\\FrmPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpLaFormula\\FrmPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T01:10:41.895Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ProductoCln.cs",
-              "DocumentMoniker": "C:\\ZyZ\\sis457_2026\\sis457_La_Formula\\LaFormula\\ClnLaFormula\\ProductoCln.cs",
-              "RelativeDocumentMoniker": "ClnLaFormula\\ProductoCln.cs",
-              "ToolTip": "C:\\ZyZ\\sis457_2026\\sis457_La_Formula\\LaFormula\\ClnLaFormula\\ProductoCln.cs",
-              "RelativeToolTip": "ClnLaFormula\\ProductoCln.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAB6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T01:24:37.563Z"
+              "Title": "ddl_dml_La_Formula.sql ",
+              "DocumentMoniker": "E:\\Informatica\\2026_1\\sis457_Fundamentos_Programacion\\basedetosLaformula\\ddl_dml_La_Formula.sql",
+              "RelativeDocumentMoniker": "..\\..\\..\\basedetosLaformula\\ddl_dml_La_Formula.sql",
+              "ToolTip": "ddl_dml_La_Formula.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-05-08T01:10:58.833Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -37,25 +37,25 @@ public partial class LabLaFormulaEntities : DbContext
 
     public virtual DbSet<Categoria> Categoria { get; set; }
 
+    public virtual DbSet<Empleado> Empleado { get; set; }
+
+    public virtual DbSet<Producto> Producto { get; set; }
+
+    public virtual DbSet<UnidadMedida> UnidadMedida { get; set; }
+
+    public virtual DbSet<Venta> Venta { get; set; }
+
+    public virtual DbSet<VentaDetalle> VentaDetalle { get; set; }
+
     public virtual DbSet<Cliente> Cliente { get; set; }
+
+    public virtual DbSet<Usuario> Usuario { get; set; }
 
     public virtual DbSet<Compra> Compra { get; set; }
 
     public virtual DbSet<CompraDetalle> CompraDetalle { get; set; }
 
-    public virtual DbSet<Empleado> Empleado { get; set; }
-
-    public virtual DbSet<Producto> Producto { get; set; }
-
     public virtual DbSet<Proveedor> Proveedor { get; set; }
-
-    public virtual DbSet<UnidadMedida> UnidadMedida { get; set; }
-
-    public virtual DbSet<Usuario> Usuario { get; set; }
-
-    public virtual DbSet<Venta> Venta { get; set; }
-
-    public virtual DbSet<VentaDetalle> VentaDetalle { get; set; }
 
 
     public virtual ObjectResult<paProductoListar_Result> paProductoListar(string parametro)
@@ -67,6 +67,313 @@ public partial class LabLaFormulaEntities : DbContext
 
 
         return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paProductoListar_Result>("paProductoListar", parametroParameter);
+    }
+
+
+    public virtual ObjectResult<paLogin_Result> paLogin(string usuario, string clave)
+    {
+
+        var usuarioParameter = usuario != null ?
+            new ObjectParameter("usuario", usuario) :
+            new ObjectParameter("usuario", typeof(string));
+
+
+        var claveParameter = clave != null ?
+            new ObjectParameter("clave", clave) :
+            new ObjectParameter("clave", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paLogin_Result>("paLogin", usuarioParameter, claveParameter);
+    }
+
+
+    public virtual int paProductoActualizar(Nullable<int> id, Nullable<int> idUnidadMedida, Nullable<int> idCategoria, string codigo, string descripcion, string marca, string ubicacionBodega, Nullable<decimal> saldo, Nullable<decimal> precioVenta, Nullable<decimal> factor)
+    {
+
+        var idParameter = id.HasValue ?
+            new ObjectParameter("id", id) :
+            new ObjectParameter("id", typeof(int));
+
+
+        var idUnidadMedidaParameter = idUnidadMedida.HasValue ?
+            new ObjectParameter("idUnidadMedida", idUnidadMedida) :
+            new ObjectParameter("idUnidadMedida", typeof(int));
+
+
+        var idCategoriaParameter = idCategoria.HasValue ?
+            new ObjectParameter("idCategoria", idCategoria) :
+            new ObjectParameter("idCategoria", typeof(int));
+
+
+        var codigoParameter = codigo != null ?
+            new ObjectParameter("codigo", codigo) :
+            new ObjectParameter("codigo", typeof(string));
+
+
+        var descripcionParameter = descripcion != null ?
+            new ObjectParameter("descripcion", descripcion) :
+            new ObjectParameter("descripcion", typeof(string));
+
+
+        var marcaParameter = marca != null ?
+            new ObjectParameter("marca", marca) :
+            new ObjectParameter("marca", typeof(string));
+
+
+        var ubicacionBodegaParameter = ubicacionBodega != null ?
+            new ObjectParameter("ubicacionBodega", ubicacionBodega) :
+            new ObjectParameter("ubicacionBodega", typeof(string));
+
+
+        var saldoParameter = saldo.HasValue ?
+            new ObjectParameter("saldo", saldo) :
+            new ObjectParameter("saldo", typeof(decimal));
+
+
+        var precioVentaParameter = precioVenta.HasValue ?
+            new ObjectParameter("precioVenta", precioVenta) :
+            new ObjectParameter("precioVenta", typeof(decimal));
+
+
+        var factorParameter = factor.HasValue ?
+            new ObjectParameter("factor", factor) :
+            new ObjectParameter("factor", typeof(decimal));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("paProductoActualizar", idParameter, idUnidadMedidaParameter, idCategoriaParameter, codigoParameter, descripcionParameter, marcaParameter, ubicacionBodegaParameter, saldoParameter, precioVentaParameter, factorParameter);
+    }
+
+
+    public virtual ObjectResult<Nullable<decimal>> paProductoCrear(Nullable<int> idUnidadMedida, Nullable<int> idCategoria, string codigo, string descripcion, string marca, string ubicacionBodega, Nullable<decimal> saldo, Nullable<decimal> precioVenta, Nullable<decimal> factor)
+    {
+
+        var idUnidadMedidaParameter = idUnidadMedida.HasValue ?
+            new ObjectParameter("idUnidadMedida", idUnidadMedida) :
+            new ObjectParameter("idUnidadMedida", typeof(int));
+
+
+        var idCategoriaParameter = idCategoria.HasValue ?
+            new ObjectParameter("idCategoria", idCategoria) :
+            new ObjectParameter("idCategoria", typeof(int));
+
+
+        var codigoParameter = codigo != null ?
+            new ObjectParameter("codigo", codigo) :
+            new ObjectParameter("codigo", typeof(string));
+
+
+        var descripcionParameter = descripcion != null ?
+            new ObjectParameter("descripcion", descripcion) :
+            new ObjectParameter("descripcion", typeof(string));
+
+
+        var marcaParameter = marca != null ?
+            new ObjectParameter("marca", marca) :
+            new ObjectParameter("marca", typeof(string));
+
+
+        var ubicacionBodegaParameter = ubicacionBodega != null ?
+            new ObjectParameter("ubicacionBodega", ubicacionBodega) :
+            new ObjectParameter("ubicacionBodega", typeof(string));
+
+
+        var saldoParameter = saldo.HasValue ?
+            new ObjectParameter("saldo", saldo) :
+            new ObjectParameter("saldo", typeof(decimal));
+
+
+        var precioVentaParameter = precioVenta.HasValue ?
+            new ObjectParameter("precioVenta", precioVenta) :
+            new ObjectParameter("precioVenta", typeof(decimal));
+
+
+        var factorParameter = factor.HasValue ?
+            new ObjectParameter("factor", factor) :
+            new ObjectParameter("factor", typeof(decimal));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("paProductoCrear", idUnidadMedidaParameter, idCategoriaParameter, codigoParameter, descripcionParameter, marcaParameter, ubicacionBodegaParameter, saldoParameter, precioVentaParameter, factorParameter);
+    }
+
+
+    public virtual int paProductoEliminarLogico(Nullable<int> id)
+    {
+
+        var idParameter = id.HasValue ?
+            new ObjectParameter("id", id) :
+            new ObjectParameter("id", typeof(int));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("paProductoEliminarLogico", idParameter);
+    }
+
+
+    public virtual ObjectResult<paProductoObtenerPorId_Result> paProductoObtenerPorId(Nullable<int> id)
+    {
+
+        var idParameter = id.HasValue ?
+            new ObjectParameter("id", id) :
+            new ObjectParameter("id", typeof(int));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paProductoObtenerPorId_Result>("paProductoObtenerPorId", idParameter);
+    }
+
+
+    public virtual ObjectResult<Nullable<long>> paVentaRegistrar(Nullable<int> idCliente, Nullable<int> idUsuario, string detalles)
+    {
+
+        var idClienteParameter = idCliente.HasValue ?
+            new ObjectParameter("idCliente", idCliente) :
+            new ObjectParameter("idCliente", typeof(int));
+
+
+        var idUsuarioParameter = idUsuario.HasValue ?
+            new ObjectParameter("idUsuario", idUsuario) :
+            new ObjectParameter("idUsuario", typeof(int));
+
+
+        var detallesParameter = detalles != null ?
+            new ObjectParameter("detalles", detalles) :
+            new ObjectParameter("detalles", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<long>>("paVentaRegistrar", idClienteParameter, idUsuarioParameter, detallesParameter);
+    }
+
+
+    public virtual ObjectResult<paEmpleadoListar_Result> paEmpleadoListar(string parametro)
+    {
+
+        var parametroParameter = parametro != null ?
+            new ObjectParameter("parametro", parametro) :
+            new ObjectParameter("parametro", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paEmpleadoListar_Result>("paEmpleadoListar", parametroParameter);
+    }
+
+
+    public virtual int paEmpleadoActualizar(Nullable<int> id, string cedulaIdentidad, string nombres, string primerApellido, string segundoApellido, Nullable<System.DateTime> fechaNacimiento, string direccion, string celular, string cargo)
+    {
+
+        var idParameter = id.HasValue ?
+            new ObjectParameter("id", id) :
+            new ObjectParameter("id", typeof(int));
+
+
+        var cedulaIdentidadParameter = cedulaIdentidad != null ?
+            new ObjectParameter("cedulaIdentidad", cedulaIdentidad) :
+            new ObjectParameter("cedulaIdentidad", typeof(string));
+
+
+        var nombresParameter = nombres != null ?
+            new ObjectParameter("nombres", nombres) :
+            new ObjectParameter("nombres", typeof(string));
+
+
+        var primerApellidoParameter = primerApellido != null ?
+            new ObjectParameter("primerApellido", primerApellido) :
+            new ObjectParameter("primerApellido", typeof(string));
+
+
+        var segundoApellidoParameter = segundoApellido != null ?
+            new ObjectParameter("segundoApellido", segundoApellido) :
+            new ObjectParameter("segundoApellido", typeof(string));
+
+
+        var fechaNacimientoParameter = fechaNacimiento.HasValue ?
+            new ObjectParameter("fechaNacimiento", fechaNacimiento) :
+            new ObjectParameter("fechaNacimiento", typeof(System.DateTime));
+
+
+        var direccionParameter = direccion != null ?
+            new ObjectParameter("direccion", direccion) :
+            new ObjectParameter("direccion", typeof(string));
+
+
+        var celularParameter = celular != null ?
+            new ObjectParameter("celular", celular) :
+            new ObjectParameter("celular", typeof(string));
+
+
+        var cargoParameter = cargo != null ?
+            new ObjectParameter("cargo", cargo) :
+            new ObjectParameter("cargo", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("paEmpleadoActualizar", idParameter, cedulaIdentidadParameter, nombresParameter, primerApellidoParameter, segundoApellidoParameter, fechaNacimientoParameter, direccionParameter, celularParameter, cargoParameter);
+    }
+
+
+    public virtual ObjectResult<Nullable<decimal>> paEmpleadoCrear(string cedulaIdentidad, string nombres, string primerApellido, string segundoApellido, Nullable<System.DateTime> fechaNacimiento, string direccion, string celular, string cargo)
+    {
+
+        var cedulaIdentidadParameter = cedulaIdentidad != null ?
+            new ObjectParameter("cedulaIdentidad", cedulaIdentidad) :
+            new ObjectParameter("cedulaIdentidad", typeof(string));
+
+
+        var nombresParameter = nombres != null ?
+            new ObjectParameter("nombres", nombres) :
+            new ObjectParameter("nombres", typeof(string));
+
+
+        var primerApellidoParameter = primerApellido != null ?
+            new ObjectParameter("primerApellido", primerApellido) :
+            new ObjectParameter("primerApellido", typeof(string));
+
+
+        var segundoApellidoParameter = segundoApellido != null ?
+            new ObjectParameter("segundoApellido", segundoApellido) :
+            new ObjectParameter("segundoApellido", typeof(string));
+
+
+        var fechaNacimientoParameter = fechaNacimiento.HasValue ?
+            new ObjectParameter("fechaNacimiento", fechaNacimiento) :
+            new ObjectParameter("fechaNacimiento", typeof(System.DateTime));
+
+
+        var direccionParameter = direccion != null ?
+            new ObjectParameter("direccion", direccion) :
+            new ObjectParameter("direccion", typeof(string));
+
+
+        var celularParameter = celular != null ?
+            new ObjectParameter("celular", celular) :
+            new ObjectParameter("celular", typeof(string));
+
+
+        var cargoParameter = cargo != null ?
+            new ObjectParameter("cargo", cargo) :
+            new ObjectParameter("cargo", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("paEmpleadoCrear", cedulaIdentidadParameter, nombresParameter, primerApellidoParameter, segundoApellidoParameter, fechaNacimientoParameter, direccionParameter, celularParameter, cargoParameter);
+    }
+
+
+    public virtual int paEmpleadoEliminarLogico(Nullable<int> id)
+    {
+
+        var idParameter = id.HasValue ?
+            new ObjectParameter("id", id) :
+            new ObjectParameter("id", typeof(int));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("paEmpleadoEliminarLogico", idParameter);
+    }
+
+
+    public virtual ObjectResult<paEmpleadoObtenerPorId_Result> paEmpleadoObtenerPorId(Nullable<int> id)
+    {
+
+        var idParameter = id.HasValue ?
+            new ObjectParameter("id", id) :
+            new ObjectParameter("id", typeof(int));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paEmpleadoObtenerPorId_Result>("paEmpleadoObtenerPorId", idParameter);
     }
 
 }
