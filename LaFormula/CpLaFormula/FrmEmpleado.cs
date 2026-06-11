@@ -24,6 +24,7 @@ namespace CpLaFormula
         {
             var lista = EmpleadoCln.listarEn(txtParametro.Text);
             dgvListar.DataSource = lista;
+            dgvListar.ColumnHeadersHeight = 40;
             dgvListar.Columns["id"].Visible = false;
             dgvListar.Columns["cedulaIdentidad"].HeaderText = "Cédula de Identidad";
             dgvListar.Columns["nombres"].HeaderText = "Nombres";

@@ -79,6 +79,12 @@
     <Compile Include="FrmAutenticacion.Designer.cs">
       <DependentUpon>FrmAutenticacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmClienteRapido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClienteRapido.Designer.cs">
+      <DependentUpon>FrmClienteRapido.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAutenticacion.resx">
       <DependentUpon>FrmAutenticacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClienteRapido.resx">
+      <DependentUpon>FrmClienteRapido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCompra.resx">
       <DependentUpon>FrmCompra.cs</DependentUpon>

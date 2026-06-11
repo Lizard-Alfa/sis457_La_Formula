@@ -34,6 +34,9 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.erpCliente = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtBuscarCliente = new System.Windows.Forms.TextBox();
+            this.btnNuevoCliente = new System.Windows.Forms.Button();
+            this.lblBuscarCliente = new System.Windows.Forms.Label();
             this.gbxProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.gbxDetalle.SuspendLayout();
@@ -46,7 +49,7 @@
             // 
             this.lblTitulo.BackColor = System.Drawing.SystemColors.HighlightText;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.Location = new System.Drawing.Point(20, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(21, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(890, 40);
             this.lblTitulo.TabIndex = 0;
@@ -58,7 +61,7 @@
             this.lblCliente.AutoSize = true;
             this.lblCliente.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.Location = new System.Drawing.Point(20, 60);
+            this.lblCliente.Location = new System.Drawing.Point(20, 68);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(70, 20);
             this.lblCliente.TabIndex = 1;
@@ -67,9 +70,9 @@
             // cboCliente
             // 
             this.cboCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCliente.Location = new System.Drawing.Point(96, 57);
+            this.cboCliente.Location = new System.Drawing.Point(96, 67);
             this.cboCliente.Name = "cboCliente";
-            this.cboCliente.Size = new System.Drawing.Size(284, 21);
+            this.cboCliente.Size = new System.Drawing.Size(240, 21);
             this.cboCliente.TabIndex = 2;
             // 
             // lblVendedorActual
@@ -77,7 +80,7 @@
             this.lblVendedorActual.AutoSize = true;
             this.lblVendedorActual.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblVendedorActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVendedorActual.Location = new System.Drawing.Point(400, 60);
+            this.lblVendedorActual.Location = new System.Drawing.Point(562, 60);
             this.lblVendedorActual.Name = "lblVendedorActual";
             this.lblVendedorActual.Size = new System.Drawing.Size(97, 20);
             this.lblVendedorActual.TabIndex = 3;
@@ -88,7 +91,7 @@
             this.lblFechaActual.AutoSize = true;
             this.lblFechaActual.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblFechaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaActual.Location = new System.Drawing.Point(700, 60);
+            this.lblFechaActual.Location = new System.Drawing.Point(760, 60);
             this.lblFechaActual.Name = "lblFechaActual";
             this.lblFechaActual.Size = new System.Drawing.Size(69, 20);
             this.lblFechaActual.TabIndex = 4;
@@ -121,7 +124,7 @@
             this.lblBuscarProducto.AutoSize = true;
             this.lblBuscarProducto.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblBuscarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarProducto.Location = new System.Drawing.Point(20, 350);
+            this.lblBuscarProducto.Location = new System.Drawing.Point(22, 352);
             this.lblBuscarProducto.Name = "lblBuscarProducto";
             this.lblBuscarProducto.Size = new System.Drawing.Size(70, 20);
             this.lblBuscarProducto.TabIndex = 6;
@@ -255,14 +258,48 @@
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(513, 13);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(145, 45);
+            this.btnCancelar.Size = new System.Drawing.Size(120, 45);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // erpCliente
             // 
             this.erpCliente.ContainerControl = this;
+            // 
+            // txtBuscarCliente
+            // 
+            this.txtBuscarCliente.Location = new System.Drawing.Point(96, 41);
+            this.txtBuscarCliente.Name = "txtBuscarCliente";
+            this.txtBuscarCliente.Size = new System.Drawing.Size(240, 20);
+            this.txtBuscarCliente.TabIndex = 13;
+            this.txtBuscarCliente.TextChanged += new System.EventHandler(this.txtBuscarCliente_TextChanged);
+            // 
+            // btnNuevoCliente
+            // 
+            this.btnNuevoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoCliente.Image")));
+            this.btnNuevoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevoCliente.Location = new System.Drawing.Point(355, 43);
+            this.btnNuevoCliente.Name = "btnNuevoCliente";
+            this.btnNuevoCliente.Size = new System.Drawing.Size(110, 45);
+            this.btnNuevoCliente.TabIndex = 14;
+            this.btnNuevoCliente.Text = "Agregar";
+            this.btnNuevoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevoCliente.UseVisualStyleBackColor = true;
+            this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
+            // 
+            // lblBuscarCliente
+            // 
+            this.lblBuscarCliente.AutoSize = true;
+            this.lblBuscarCliente.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscarCliente.Location = new System.Drawing.Point(20, 39);
+            this.lblBuscarCliente.Name = "lblBuscarCliente";
+            this.lblBuscarCliente.Size = new System.Drawing.Size(70, 20);
+            this.lblBuscarCliente.TabIndex = 16;
+            this.lblBuscarCliente.Text = "Buscar:";
             // 
             // FrmVenta
             // 
@@ -271,6 +308,9 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.BackgroundImage = global::CpLaFormula.Properties.Resources.fondito;
             this.ClientSize = new System.Drawing.Size(914, 681);
+            this.Controls.Add(this.lblBuscarCliente);
+            this.Controls.Add(this.btnNuevoCliente);
+            this.Controls.Add(this.txtBuscarCliente);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.cboCliente);
@@ -284,6 +324,7 @@
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.lblValorTotal);
             this.Controls.Add(this.pnlAcciones);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "::: Formularío de Ventas :::";
@@ -320,5 +361,8 @@
         private System.Windows.Forms.Button btnEliminarDetalle;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.ErrorProvider erpCliente;
+        private System.Windows.Forms.TextBox txtBuscarCliente;
+        private System.Windows.Forms.Button btnNuevoCliente;
+        private System.Windows.Forms.Label lblBuscarCliente;
     }
 }

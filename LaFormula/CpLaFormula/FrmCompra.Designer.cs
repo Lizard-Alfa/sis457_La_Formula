@@ -12,6 +12,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCompra));
             this.cboProveedor = new System.Windows.Forms.ComboBox();
             this.txtTransaccion = new System.Windows.Forms.TextBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
@@ -112,9 +113,10 @@
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.Location = new System.Drawing.Point(317, 404);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(140, 45);
+            this.btnGuardar.Size = new System.Drawing.Size(120, 45);
             this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Comprar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -125,11 +127,12 @@
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCancelar.Image = global::CpLaFormula.Properties.Resources.cerrar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(463, 404);
+            this.btnCancelar.Location = new System.Drawing.Point(443, 404);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(145, 45);
+            this.btnCancelar.Size = new System.Drawing.Size(120, 45);
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -139,11 +142,12 @@
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = global::CpLaFormula.Properties.Resources.edit2;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(15, 404);
+            this.btnAgregar.Location = new System.Drawing.Point(65, 404);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(145, 45);
+            this.btnAgregar.Size = new System.Drawing.Size(120, 45);
             this.btnAgregar.TabIndex = 10;
             this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
@@ -153,11 +157,12 @@
             this.btnEliminarDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarDetalle.Image = global::CpLaFormula.Properties.Resources.borrar;
             this.btnEliminarDetalle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarDetalle.Location = new System.Drawing.Point(166, 404);
+            this.btnEliminarDetalle.Location = new System.Drawing.Point(191, 404);
             this.btnEliminarDetalle.Name = "btnEliminarDetalle";
-            this.btnEliminarDetalle.Size = new System.Drawing.Size(145, 45);
+            this.btnEliminarDetalle.Size = new System.Drawing.Size(120, 45);
             this.btnEliminarDetalle.TabIndex = 11;
             this.btnEliminarDetalle.Text = "Eliminar";
+            this.btnEliminarDetalle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminarDetalle.UseVisualStyleBackColor = false;
             this.btnEliminarDetalle.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -167,11 +172,12 @@
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.Image = global::CpLaFormula.Properties.Resources.cerrar;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(614, 404);
+            this.btnCerrar.Location = new System.Drawing.Point(569, 404);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(145, 45);
+            this.btnCerrar.Size = new System.Drawing.Size(120, 45);
             this.btnCerrar.TabIndex = 12;
             this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
@@ -198,6 +204,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnEliminarDetalle);
             this.Controls.Add(this.btnCerrar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "::: Registro de Compras :::";

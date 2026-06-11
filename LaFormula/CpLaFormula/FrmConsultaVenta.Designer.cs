@@ -12,6 +12,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultaVenta));
             this.dgvVentas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.SuspendLayout();
@@ -24,7 +25,7 @@
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVentas.Location = new System.Drawing.Point(0, 0);
-            this.dgvVentas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvVentas.Margin = new System.Windows.Forms.Padding(2);
             this.dgvVentas.MultiSelect = false;
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.ReadOnly = true;
@@ -39,7 +40,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 261);
             this.Controls.Add(this.dgvVentas);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmConsultaVenta";
             this.Text = "::: Registro de Ventas :::";
             this.Load += new System.EventHandler(this.FrmConsultaVenta_Load);

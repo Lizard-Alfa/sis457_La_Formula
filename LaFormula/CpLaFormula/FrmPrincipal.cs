@@ -14,39 +14,45 @@ namespace CpLaFormula
     public partial class FrmPrincipal : Form
     {
         FrmAutenticacion frmAutenticacion;
+
         public FrmPrincipal(FrmAutenticacion frmAutenticacion)
         {
             InitializeComponent();
             this.frmAutenticacion = frmAutenticacion;
         }
+
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             Util.usuario = null;
             frmAutenticacion.Show();
         }
+
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnInProducto_Click(object sender, EventArgs e)
         {
             new FrmProducto().ShowDialog();
-
         }
 
         private void btnAdEmpleados_Click(object sender, EventArgs e)
         {
             new FrmEmpleado().ShowDialog();
         }
+
         private void btnAdCompra_Click(object sender, EventArgs e)
         {
             new FrmCompra().ShowDialog();
         }
+
         private void btnAdVenta_Click(object sender, EventArgs e)
         {
-            new FrmVenta(1, "VendedorPrueba").ShowDialog();
+            int idUsuario = Util.usuario != null ? Util.usuario.id : 0;
+            string nombreVendedor = Util.usuario != null ? Util.usuario.usuario1 : "Desconocido";
+            new FrmVenta(idUsuario, nombreVendedor).ShowDialog();
         }
+
         private void btnAdRegistro_Click(object sender, EventArgs e)
         {
             new FrmConsultaVenta().ShowDialog();

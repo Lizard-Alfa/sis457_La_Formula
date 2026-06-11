@@ -1,7 +1,7 @@
 ﻿using CadLaFormula;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
+
 namespace ClnLaFormula
 {
     public static class CompraCln
