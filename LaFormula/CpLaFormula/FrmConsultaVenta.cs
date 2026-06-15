@@ -40,7 +40,8 @@ namespace CpLaFormula
                     v.id,
                     Fecha = v.fecha.ToString("dd/MM/yyyy HH:mm"),
                     Cliente = v.Cliente != null ? v.Cliente.nombres : "Sin Cliente",
-                    Vendedor = v.Usuario != null ? v.Usuario.ToString() : "Sistema",
+                    //modifique para que salga el vendedor y no system
+                    Vendedor = v.Usuario != null ? v.Usuario.usuario1 : "Sistema",
                     Total = v.total.ToString("N2")
                 }).ToList();
             }

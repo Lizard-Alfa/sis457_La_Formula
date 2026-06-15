@@ -4,6 +4,7 @@ using MaterialSkin;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace CpLaFormula
@@ -47,8 +48,11 @@ namespace CpLaFormula
         {
             try
             {
-                var clientes = ClienteCln.listar();
-
+                //agregamos para que liste los ultimos 10 clientes registrados , de manera descendente
+                var clientes = ClienteCln.listar()
+                                         .OrderByDescending(c => c.id)
+                                         .Take(10)
+                                         .ToList();
                 var listaClientes = new List<Cliente>();
                 listaClientes.Add(new Cliente { id = 0, nombres = "Cliente no registrado" });
                 listaClientes.AddRange(clientes);
