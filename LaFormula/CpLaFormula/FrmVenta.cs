@@ -101,22 +101,6 @@ namespace CpLaFormula
 
         private void configurarDataGridViews()
         {
-            dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProductos.MultiSelect = false;
-            dgvProductos.AllowUserToAddRows = false;
-            dgvProductos.AllowUserToDeleteRows = false;
-            dgvProductos.ReadOnly = true;
-            dgvProductos.ScrollBars = ScrollBars.Both;
-            dgvProductos.ColumnHeadersHeight = 45;
-
-            dgvDetalleVenta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvDetalleVenta.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvDetalleVenta.MultiSelect = false;
-            dgvDetalleVenta.AllowUserToAddRows = false;
-            dgvDetalleVenta.AllowUserToDeleteRows = false;
-            dgvDetalleVenta.ReadOnly = true;
-            dgvDetalleVenta.ColumnHeadersHeight = 35;
             dgvDetalleVenta.Columns.Clear();
             dgvDetalleVenta.Columns.Add("idProducto", "ID");
             dgvDetalleVenta.Columns.Add("codigo", "Código");

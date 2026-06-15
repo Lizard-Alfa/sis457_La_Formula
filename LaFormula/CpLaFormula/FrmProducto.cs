@@ -199,6 +199,30 @@ namespace CpLaFormula
         {
             if (validar())
             {
+                // 1. Obtener el ID actual (si es nuevo es 0, si es editar obtenemos el valor del grid)
+                int idActual = esNuevo ? 0 : (int)dgvLista.CurrentRow.Cells["id"].Value;
+
+                // 2. Validación directa contra la base de datos
+                using (var db = new LabLaFormulaEntities())
+                {
+                    // Validar si el código ya existe en otro registro
+                    bool codigoExiste = db.Producto.Any(x => x.codigo == txtCodigo.Text.Trim() && x.id != idActual && x.estado == 1);
+                    if (codigoExiste)
+                    {
+                        MessageBox.Show("Error: Ya existe otro producto activo con este mismo Código.", "::: Mensaje - La Formula :::", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtCodigo.Focus();
+                        return; // Detiene la ejecución
+                    }
+
+                    // Validar si la descripción ya existe en otro registro
+                    bool descExiste = db.Producto.Any(x => x.descripcion == txtDescripcion.Text.Trim() && x.id != idActual && x.estado == 1);
+                    if (descExiste)
+                    {
+                        MessageBox.Show("Error: Ya existe otro producto activo con esta misma Descripción.", "::: Mensaje - La Formula :::", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtDescripcion.Focus();
+                        return; // Detiene la ejecución
+                    }
+                }
                 var producto = new Producto()
                 {
                     codigo = txtCodigo.Text.Trim(),
