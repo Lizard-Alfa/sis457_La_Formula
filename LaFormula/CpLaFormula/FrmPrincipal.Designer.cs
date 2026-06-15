@@ -55,9 +55,10 @@
             // 
             this.panelPrinci.BackgroundImage = global::CpLaFormula.Properties.Resources.finasl;
             this.panelPrinci.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrinci.Location = new System.Drawing.Point(0, 161);
+            this.panelPrinci.Location = new System.Drawing.Point(0, 201);
+            this.panelPrinci.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelPrinci.Name = "panelPrinci";
-            this.panelPrinci.Size = new System.Drawing.Size(800, 289);
+            this.panelPrinci.Size = new System.Drawing.Size(1067, 353);
             this.panelPrinci.TabIndex = 3;
             // 
             // btnCerrarSesion
@@ -67,9 +68,10 @@
             this.btnCerrarSesion.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.Image = global::CpLaFormula.Properties.Resources.sesions;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(758, 36);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(1011, 44);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(42, 42);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(56, 52);
             this.btnCerrarSesion.TabIndex = 1;
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
@@ -85,9 +87,10 @@
             this.c1Ribbon1.HeaderWatermark = global::CpLaFormula.Properties.Resources.Gemini_Generated_Image_fyee99fyee99fyee;
             this.c1Ribbon1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.c1Ribbon1.Location = new System.Drawing.Point(0, 0);
+            this.c1Ribbon1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.c1Ribbon1.Name = "c1Ribbon1";
             this.c1Ribbon1.QatHolder = this.ribbonQat1;
-            this.c1Ribbon1.Size = new System.Drawing.Size(800, 161);
+            this.c1Ribbon1.Size = new System.Drawing.Size(1067, 201);
             this.c1Ribbon1.Tabs.Add(this.rinInventario);
             this.c1Ribbon1.Tabs.Add(this.rinAdministracion);
             this.c1Ribbon1.Tabs.Add(this.rinCompreVenta);
@@ -185,14 +188,15 @@
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panelPrinci);
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.c1Ribbon1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmPrincipal";
             this.Text = "FrmPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
