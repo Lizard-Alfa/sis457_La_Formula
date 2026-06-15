@@ -35,14 +35,14 @@
             // cboProveedor
             // 
             this.cboProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboProveedor.Location = new System.Drawing.Point(15, 15);
+            this.cboProveedor.Location = new System.Drawing.Point(6, 74);
             this.cboProveedor.Name = "cboProveedor";
             this.cboProveedor.Size = new System.Drawing.Size(350, 21);
             this.cboProveedor.TabIndex = 0;
             // 
             // txtTransaccion
             // 
-            this.txtTransaccion.Location = new System.Drawing.Point(371, 16);
+            this.txtTransaccion.Location = new System.Drawing.Point(370, 75);
             this.txtTransaccion.Name = "txtTransaccion";
             this.txtTransaccion.Size = new System.Drawing.Size(100, 20);
             this.txtTransaccion.TabIndex = 1;
@@ -51,7 +51,7 @@
             // 
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(694, 19);
+            this.dtpFecha.Location = new System.Drawing.Point(724, 74);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(120, 26);
             this.dtpFecha.TabIndex = 2;
@@ -59,16 +59,16 @@
             // dgvProductos
             // 
             this.dgvProductos.AllowUserToAddRows = false;
-            this.dgvProductos.Location = new System.Drawing.Point(14, 51);
+            this.dgvProductos.Location = new System.Drawing.Point(6, 114);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
-            this.dgvProductos.Size = new System.Drawing.Size(800, 140);
+            this.dgvProductos.Size = new System.Drawing.Size(838, 116);
             this.dgvProductos.TabIndex = 3;
             this.dgvProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellDoubleClick);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(15, 211);
+            this.txtBuscar.Location = new System.Drawing.Point(14, 252);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(350, 20);
             this.txtBuscar.TabIndex = 4;
@@ -79,7 +79,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = global::CpLaFormula.Properties.Resources.lupa2;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(371, 197);
+            this.btnBuscar.Location = new System.Drawing.Point(370, 236);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(145, 45);
             this.btnBuscar.TabIndex = 5;
@@ -89,17 +89,17 @@
             // dgvDetalle
             // 
             this.dgvDetalle.AllowUserToAddRows = false;
-            this.dgvDetalle.Location = new System.Drawing.Point(15, 248);
+            this.dgvDetalle.Location = new System.Drawing.Point(6, 305);
             this.dgvDetalle.Name = "dgvDetalle";
             this.dgvDetalle.ReadOnly = true;
-            this.dgvDetalle.Size = new System.Drawing.Size(800, 150);
+            this.dgvDetalle.Size = new System.Drawing.Size(838, 108);
             this.dgvDetalle.TabIndex = 6;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(765, 404);
+            this.lblTotal.Location = new System.Drawing.Point(777, 437);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(49, 24);
             this.lblTotal.TabIndex = 7;
@@ -111,7 +111,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = global::CpLaFormula.Properties.Resources.savess;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(317, 404);
+            this.btnGuardar.Location = new System.Drawing.Point(317, 428);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(120, 45);
             this.btnGuardar.TabIndex = 8;
@@ -127,7 +127,7 @@
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCancelar.Image = global::CpLaFormula.Properties.Resources.cerrar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(443, 404);
+            this.btnCancelar.Location = new System.Drawing.Point(443, 428);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 45);
             this.btnCancelar.TabIndex = 9;
@@ -142,7 +142,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = global::CpLaFormula.Properties.Resources.edit2;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(65, 404);
+            this.btnAgregar.Location = new System.Drawing.Point(65, 428);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(120, 45);
             this.btnAgregar.TabIndex = 10;
@@ -157,7 +157,7 @@
             this.btnEliminarDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarDetalle.Image = global::CpLaFormula.Properties.Resources.borrar;
             this.btnEliminarDetalle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarDetalle.Location = new System.Drawing.Point(191, 404);
+            this.btnEliminarDetalle.Location = new System.Drawing.Point(191, 428);
             this.btnEliminarDetalle.Name = "btnEliminarDetalle";
             this.btnEliminarDetalle.Size = new System.Drawing.Size(120, 45);
             this.btnEliminarDetalle.TabIndex = 11;
@@ -172,7 +172,7 @@
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.Image = global::CpLaFormula.Properties.Resources.cerrar;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(569, 404);
+            this.btnCerrar.Location = new System.Drawing.Point(569, 428);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(120, 45);
             this.btnCerrar.TabIndex = 12;
@@ -190,7 +190,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(829, 461);
+            this.ClientSize = new System.Drawing.Size(850, 491);
             this.Controls.Add(this.cboProveedor);
             this.Controls.Add(this.txtTransaccion);
             this.Controls.Add(this.dtpFecha);
@@ -205,9 +205,11 @@
             this.Controls.Add(this.btnEliminarDetalle);
             this.Controls.Add(this.btnCerrar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "::: Registro de Compras :::";
+            this.Text = "Registro de Compras";
             this.Load += new System.EventHandler(this.FrmCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).EndInit();

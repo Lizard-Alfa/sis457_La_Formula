@@ -1,5 +1,6 @@
 ﻿using CadLaFormula;
 using ClnLaFormula;
+using MaterialSkin;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace CpLaFormula
 {
-    public partial class FrmProducto : Form
+    public partial class FrmProducto : MaterialSkin.Controls.MaterialForm
     {
         private bool esNuevo = false;
 
@@ -61,7 +62,16 @@ namespace CpLaFormula
         }
         private void FrmProducto_Load(object sender, EventArgs e)
         {
-            Size = new Size(1128, 461);
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Red800,
+                Primary.Red900,
+                Primary.Red600,
+                Accent.Red100,
+                TextShade.WHITE
+            );
+            Size = new Size(1152, 464);
             cargarUnidadMedida();
             cargarCatalogo();
             listar();
@@ -99,7 +109,7 @@ namespace CpLaFormula
         {
             esNuevo = true;
             pnlAcciones.Enabled = false;
-            Size = new Size(1128, 610);
+            Size = new Size(1152, 608);
             limpiar();
             txtCodigo.Focus();
         }
@@ -108,7 +118,7 @@ namespace CpLaFormula
         {
             esNuevo = false;
             pnlAcciones.Enabled = false;
-            Size = new Size(1128, 610);
+            Size = new Size(1152, 608);
             resetearErrores();
 
             int id = (int)dgvLista.CurrentRow.Cells["id"].Value;
@@ -129,7 +139,7 @@ namespace CpLaFormula
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             pnlAcciones.Enabled = true;
-            Size = new Size(1128, 461);
+            Size = new Size(1152, 464);
         }
 
         private bool validar()

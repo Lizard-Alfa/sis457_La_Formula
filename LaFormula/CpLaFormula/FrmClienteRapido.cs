@@ -1,12 +1,14 @@
 ﻿using CadLaFormula;
 using ClnLaFormula;
+using MaterialSkin;
 using System;
 using System.Windows.Forms;
 
 namespace CpLaFormula
 {
-    public partial class FrmClienteRapido : Form
+    public partial class FrmClienteRapido : MaterialSkin.Controls.MaterialForm
     {
+
         public int IdClienteCreado { get; private set; }
 
         public FrmClienteRapido()
@@ -16,6 +18,17 @@ namespace CpLaFormula
         }
         private void FrmClienteRapido_Load(object sender, EventArgs e)
         {
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Red800,
+                Primary.Red900,
+                Primary.Red600,
+                Accent.Red100,
+                TextShade.WHITE
+            );
+
             txtNombres.Focus();
         }
         private void txtNombres_KeyPress(object sender, KeyPressEventArgs e)
@@ -73,12 +86,12 @@ namespace CpLaFormula
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
-            catch (Exception ex) { string mensajeCompleto = $"Error: {ex.Message}";
-                if (ex.InnerException != null) { mensajeCompleto += $"\n\nInner Exception: {ex.InnerException.Message}";
-                 if (ex.InnerException.InnerException != null) { mensajeCompleto += $"\n\nInner Exception 2: {ex.InnerException.InnerException.Message}";
-                    }
-                }
-                MessageBox.Show(mensajeCompleto, "Error Detallado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: Ya existe un cliente activo con esta Cédula.",
+                                "::: Mensaje :::", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                txtCi.Focus();
             }
         }
 

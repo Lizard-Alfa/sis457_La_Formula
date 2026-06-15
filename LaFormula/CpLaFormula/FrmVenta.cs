@@ -1,5 +1,6 @@
 ﻿using CadLaFormula;
 using ClnLaFormula;
+using MaterialSkin;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -7,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CpLaFormula
 {
-    public partial class FrmVenta : Form
+    public partial class FrmVenta : MaterialSkin.Controls.MaterialForm
     {
         private List<VentaDetalle> listaDetalle;
         private decimal totalVenta;
@@ -24,6 +25,15 @@ namespace CpLaFormula
 
         private void FrmVenta_Load(object sender, EventArgs e)
         {
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Red800,
+                Primary.Red900,
+                Primary.Red600,
+                Accent.Red100,
+                TextShade.WHITE
+            );
             lblVendedorActual.Text = nombreVendedor;
             lblFechaActual.Text = DateTime.Now.ToString("dd/MM/yyyy");
             cargarClientes();

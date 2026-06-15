@@ -48,10 +48,10 @@
             // lblTitulo
             // 
             this.lblTitulo.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.Location = new System.Drawing.Point(21, 9);
+            this.lblTitulo.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(-4, 64);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(890, 40);
+            this.lblTitulo.Size = new System.Drawing.Size(977, 40);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Venta de Productos";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,17 +60,17 @@
             // 
             this.lblCliente.AutoSize = true;
             this.lblCliente.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.Location = new System.Drawing.Point(20, 68);
+            this.lblCliente.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCliente.Location = new System.Drawing.Point(2, 133);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(70, 20);
+            this.lblCliente.Size = new System.Drawing.Size(64, 19);
             this.lblCliente.TabIndex = 1;
             this.lblCliente.Text = "Cliente:";
             // 
             // cboCliente
             // 
             this.cboCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCliente.Location = new System.Drawing.Point(96, 67);
+            this.cboCliente.Location = new System.Drawing.Point(78, 132);
             this.cboCliente.Name = "cboCliente";
             this.cboCliente.Size = new System.Drawing.Size(240, 21);
             this.cboCliente.TabIndex = 2;
@@ -79,10 +79,10 @@
             // 
             this.lblVendedorActual.AutoSize = true;
             this.lblVendedorActual.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblVendedorActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVendedorActual.Location = new System.Drawing.Point(562, 60);
+            this.lblVendedorActual.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVendedorActual.Location = new System.Drawing.Point(544, 125);
             this.lblVendedorActual.Name = "lblVendedorActual";
-            this.lblVendedorActual.Size = new System.Drawing.Size(97, 20);
+            this.lblVendedorActual.Size = new System.Drawing.Size(88, 19);
             this.lblVendedorActual.TabIndex = 3;
             this.lblVendedorActual.Text = "Vendedor: ";
             // 
@@ -90,10 +90,10 @@
             // 
             this.lblFechaActual.AutoSize = true;
             this.lblFechaActual.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblFechaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaActual.Location = new System.Drawing.Point(760, 60);
+            this.lblFechaActual.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaActual.Location = new System.Drawing.Point(742, 125);
             this.lblFechaActual.Name = "lblFechaActual";
-            this.lblFechaActual.Size = new System.Drawing.Size(69, 20);
+            this.lblFechaActual.Size = new System.Drawing.Size(60, 19);
             this.lblFechaActual.TabIndex = 4;
             this.lblFechaActual.Text = "Fecha: ";
             // 
@@ -102,9 +102,9 @@
             this.gbxProductos.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.gbxProductos.Controls.Add(this.dgvProductos);
             this.gbxProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxProductos.Location = new System.Drawing.Point(20, 90);
+            this.gbxProductos.Location = new System.Drawing.Point(6, 159);
             this.gbxProductos.Name = "gbxProductos";
-            this.gbxProductos.Size = new System.Drawing.Size(890, 250);
+            this.gbxProductos.Size = new System.Drawing.Size(960, 226);
             this.gbxProductos.TabIndex = 5;
             this.gbxProductos.TabStop = false;
             this.gbxProductos.Text = "Productos";
@@ -115,7 +115,7 @@
             this.dgvProductos.Location = new System.Drawing.Point(6, 19);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
-            this.dgvProductos.Size = new System.Drawing.Size(880, 225);
+            this.dgvProductos.Size = new System.Drawing.Size(948, 201);
             this.dgvProductos.TabIndex = 0;
             this.dgvProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellDoubleClick);
             // 
@@ -123,16 +123,16 @@
             // 
             this.lblBuscarProducto.AutoSize = true;
             this.lblBuscarProducto.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBuscarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarProducto.Location = new System.Drawing.Point(22, 352);
+            this.lblBuscarProducto.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscarProducto.Location = new System.Drawing.Point(8, 402);
             this.lblBuscarProducto.Name = "lblBuscarProducto";
-            this.lblBuscarProducto.Size = new System.Drawing.Size(70, 20);
+            this.lblBuscarProducto.Size = new System.Drawing.Size(64, 19);
             this.lblBuscarProducto.TabIndex = 6;
             this.lblBuscarProducto.Text = "Buscar:";
             // 
             // txtBuscarProducto
             // 
-            this.txtBuscarProducto.Location = new System.Drawing.Point(96, 354);
+            this.txtBuscarProducto.Location = new System.Drawing.Point(84, 404);
             this.txtBuscarProducto.Name = "txtBuscarProducto";
             this.txtBuscarProducto.Size = new System.Drawing.Size(300, 20);
             this.txtBuscarProducto.TabIndex = 7;
@@ -141,12 +141,12 @@
             // btnBuscarProducto
             // 
             this.btnBuscarProducto.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBuscarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarProducto.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarProducto.Image = global::CpLaFormula.Properties.Resources.lupa2;
             this.btnBuscarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarProducto.Location = new System.Drawing.Point(404, 340);
+            this.btnBuscarProducto.Location = new System.Drawing.Point(388, 391);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(145, 45);
+            this.btnBuscarProducto.Size = new System.Drawing.Size(145, 43);
             this.btnBuscarProducto.TabIndex = 8;
             this.btnBuscarProducto.Text = "Buscar";
             this.btnBuscarProducto.UseVisualStyleBackColor = false;
@@ -157,9 +157,9 @@
             this.gbxDetalle.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.gbxDetalle.Controls.Add(this.dgvDetalleVenta);
             this.gbxDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxDetalle.Location = new System.Drawing.Point(20, 380);
+            this.gbxDetalle.Location = new System.Drawing.Point(6, 440);
             this.gbxDetalle.Name = "gbxDetalle";
-            this.gbxDetalle.Size = new System.Drawing.Size(890, 200);
+            this.gbxDetalle.Size = new System.Drawing.Size(960, 183);
             this.gbxDetalle.TabIndex = 9;
             this.gbxDetalle.TabStop = false;
             this.gbxDetalle.Text = "Detalle";
@@ -170,16 +170,16 @@
             this.dgvDetalleVenta.Location = new System.Drawing.Point(6, 19);
             this.dgvDetalleVenta.Name = "dgvDetalleVenta";
             this.dgvDetalleVenta.ReadOnly = true;
-            this.dgvDetalleVenta.Size = new System.Drawing.Size(880, 175);
+            this.dgvDetalleVenta.Size = new System.Drawing.Size(944, 158);
             this.dgvDetalleVenta.TabIndex = 0;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(767, 583);
+            this.lblTotal.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(843, 626);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(62, 24);
+            this.lblTotal.Size = new System.Drawing.Size(59, 22);
             this.lblTotal.TabIndex = 10;
             this.lblTotal.Text = "Total:";
             // 
@@ -188,7 +188,7 @@
             this.lblValorTotal.AutoSize = true;
             this.lblValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValorTotal.ForeColor = System.Drawing.Color.Green;
-            this.lblValorTotal.Location = new System.Drawing.Point(835, 583);
+            this.lblValorTotal.Location = new System.Drawing.Point(911, 626);
             this.lblValorTotal.Name = "lblValorTotal";
             this.lblValorTotal.Size = new System.Drawing.Size(49, 24);
             this.lblValorTotal.TabIndex = 11;
@@ -202,17 +202,17 @@
             this.pnlAcciones.Controls.Add(this.btnAgregar);
             this.pnlAcciones.Controls.Add(this.btnGuardar);
             this.pnlAcciones.Controls.Add(this.btnCancelar);
-            this.pnlAcciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlAcciones.Location = new System.Drawing.Point(20, 610);
+            this.pnlAcciones.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlAcciones.Location = new System.Drawing.Point(6, 653);
             this.pnlAcciones.Name = "pnlAcciones";
-            this.pnlAcciones.Size = new System.Drawing.Size(890, 70);
+            this.pnlAcciones.Size = new System.Drawing.Size(960, 70);
             this.pnlAcciones.TabIndex = 12;
             // 
             // btnCerrar
             // 
             this.btnCerrar.Image = global::CpLaFormula.Properties.Resources.cerrar;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(664, 14);
+            this.btnCerrar.Location = new System.Drawing.Point(765, 14);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(145, 45);
             this.btnCerrar.TabIndex = 0;
@@ -223,7 +223,7 @@
             // 
             this.btnEliminarDetalle.Image = global::CpLaFormula.Properties.Resources.borrar;
             this.btnEliminarDetalle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarDetalle.Location = new System.Drawing.Point(211, 13);
+            this.btnEliminarDetalle.Location = new System.Drawing.Point(249, 13);
             this.btnEliminarDetalle.Name = "btnEliminarDetalle";
             this.btnEliminarDetalle.Size = new System.Drawing.Size(145, 45);
             this.btnEliminarDetalle.TabIndex = 1;
@@ -245,7 +245,7 @@
             // 
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(362, 14);
+            this.btnGuardar.Location = new System.Drawing.Point(427, 14);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(145, 45);
             this.btnGuardar.TabIndex = 3;
@@ -256,7 +256,7 @@
             // 
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(513, 13);
+            this.btnCancelar.Location = new System.Drawing.Point(609, 14);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 45);
             this.btnCancelar.TabIndex = 4;
@@ -270,7 +270,7 @@
             // 
             // txtBuscarCliente
             // 
-            this.txtBuscarCliente.Location = new System.Drawing.Point(96, 41);
+            this.txtBuscarCliente.Location = new System.Drawing.Point(78, 106);
             this.txtBuscarCliente.Name = "txtBuscarCliente";
             this.txtBuscarCliente.Size = new System.Drawing.Size(240, 20);
             this.txtBuscarCliente.TabIndex = 13;
@@ -278,10 +278,10 @@
             // 
             // btnNuevoCliente
             // 
-            this.btnNuevoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoCliente.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoCliente.Image")));
             this.btnNuevoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoCliente.Location = new System.Drawing.Point(355, 43);
+            this.btnNuevoCliente.Location = new System.Drawing.Point(337, 108);
             this.btnNuevoCliente.Name = "btnNuevoCliente";
             this.btnNuevoCliente.Size = new System.Drawing.Size(110, 45);
             this.btnNuevoCliente.TabIndex = 14;
@@ -294,10 +294,10 @@
             // 
             this.lblBuscarCliente.AutoSize = true;
             this.lblBuscarCliente.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarCliente.Location = new System.Drawing.Point(20, 39);
+            this.lblBuscarCliente.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscarCliente.Location = new System.Drawing.Point(2, 104);
             this.lblBuscarCliente.Name = "lblBuscarCliente";
-            this.lblBuscarCliente.Size = new System.Drawing.Size(70, 20);
+            this.lblBuscarCliente.Size = new System.Drawing.Size(64, 19);
             this.lblBuscarCliente.TabIndex = 16;
             this.lblBuscarCliente.Text = "Buscar:";
             // 
@@ -307,7 +307,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.BackgroundImage = global::CpLaFormula.Properties.Resources.fondito;
-            this.ClientSize = new System.Drawing.Size(914, 681);
+            this.ClientSize = new System.Drawing.Size(972, 727);
             this.Controls.Add(this.lblBuscarCliente);
             this.Controls.Add(this.btnNuevoCliente);
             this.Controls.Add(this.txtBuscarCliente);
@@ -327,7 +327,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "::: Formularío de Ventas :::";
+            this.Text = " Formularío de Ventas ";
             this.Load += new System.EventHandler(this.FrmVenta_Load);
             this.gbxProductos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();

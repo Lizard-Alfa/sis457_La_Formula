@@ -16,9 +16,11 @@ namespace CpLaFormula
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAutenticacion());
+            //Application.Run(new FrmAutenticacion());
+            Application.Run(new FrmPrincipal(new FrmAutenticacion()));
             // Para Prueba Venta
             //Application.Run(new FrmVenta(1, "VendedorPrueba"));
+            //Application.Run(new FrmProducto());
         }
     }
 }

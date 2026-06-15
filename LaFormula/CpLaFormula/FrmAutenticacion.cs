@@ -70,5 +70,14 @@ namespace CpLaFormula
         {
 
         }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtClave.Focus();
+                e.Handled = true;
+            }
+        }
     }
 }

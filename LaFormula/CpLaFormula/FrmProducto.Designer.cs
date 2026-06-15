@@ -98,16 +98,16 @@
             this.dgvLista.ReadOnly = true;
             this.dgvLista.RowHeadersWidth = 51;
             this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLista.Size = new System.Drawing.Size(995, 216);
+            this.dgvLista.Size = new System.Drawing.Size(1121, 216);
             this.dgvLista.TabIndex = 0;
             // 
             // lblTitulo
             // 
             this.lblTitulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(2, 19);
+            this.lblTitulo.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(2, 64);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(1126, 51);
+            this.lblTitulo.Size = new System.Drawing.Size(1144, 37);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Productos de la Formula";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -116,16 +116,17 @@
             // 
             this.lblParametro.AutoSize = true;
             this.lblParametro.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblParametro.Location = new System.Drawing.Point(39, 78);
+            this.lblParametro.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblParametro.Location = new System.Drawing.Point(41, 116);
             this.lblParametro.Name = "lblParametro";
-            this.lblParametro.Size = new System.Drawing.Size(385, 20);
+            this.lblParametro.Size = new System.Drawing.Size(377, 19);
             this.lblParametro.TabIndex = 2;
             this.lblParametro.Text = "Buscar por Codigo , Descripción o Unidad de Medida:";
             this.lblParametro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtParametro
             // 
-            this.txtParametro.Location = new System.Drawing.Point(430, 75);
+            this.txtParametro.Location = new System.Drawing.Point(432, 113);
             this.txtParametro.MaxLength = 50;
             this.txtParametro.Name = "txtParametro";
             this.txtParametro.Size = new System.Drawing.Size(528, 26);
@@ -136,9 +137,9 @@
             // 
             this.gbxLista.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.gbxLista.Controls.Add(this.dgvLista);
-            this.gbxLista.Location = new System.Drawing.Point(43, 113);
+            this.gbxLista.Location = new System.Drawing.Point(7, 152);
             this.gbxLista.Name = "gbxLista";
-            this.gbxLista.Size = new System.Drawing.Size(1013, 253);
+            this.gbxLista.Size = new System.Drawing.Size(1139, 253);
             this.gbxLista.TabIndex = 5;
             this.gbxLista.TabStop = false;
             this.gbxLista.Text = "Lista de Productos";
@@ -150,16 +151,17 @@
             this.pnlAcciones.Controls.Add(this.btnEliminar);
             this.pnlAcciones.Controls.Add(this.btnEditar);
             this.pnlAcciones.Controls.Add(this.btnNuevo);
-            this.pnlAcciones.Location = new System.Drawing.Point(7, 372);
+            this.pnlAcciones.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlAcciones.Location = new System.Drawing.Point(7, 411);
             this.pnlAcciones.Name = "pnlAcciones";
-            this.pnlAcciones.Size = new System.Drawing.Size(1093, 49);
+            this.pnlAcciones.Size = new System.Drawing.Size(1139, 49);
             this.pnlAcciones.TabIndex = 6;
             // 
             // btnCerrar
             // 
             this.btnCerrar.Image = global::CpLaFormula.Properties.Resources.cerrar;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(553, 2);
+            this.btnCerrar.Location = new System.Drawing.Point(687, 2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(93, 44);
             this.btnCerrar.TabIndex = 8;
@@ -172,7 +174,7 @@
             // 
             this.btnEliminar.Image = global::CpLaFormula.Properties.Resources.borrar;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(436, 2);
+            this.btnEliminar.Location = new System.Drawing.Point(559, 2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(106, 44);
             this.btnEliminar.TabIndex = 7;
@@ -185,7 +187,7 @@
             // 
             this.btnEditar.Image = global::CpLaFormula.Properties.Resources.edit2;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(338, 3);
+            this.btnEditar.Location = new System.Drawing.Point(446, 2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(92, 44);
             this.btnEditar.TabIndex = 6;
@@ -198,7 +200,7 @@
             // 
             this.btnNuevo.Image = global::CpLaFormula.Properties.Resources.savess;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(231, 3);
+            this.btnNuevo.Location = new System.Drawing.Point(318, 2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(101, 44);
             this.btnNuevo.TabIndex = 5;
@@ -230,9 +232,10 @@
             this.gbxDatos.Controls.Add(this.lblDescripcion);
             this.gbxDatos.Controls.Add(this.lblCodigo);
             this.gbxDatos.Controls.Add(this.lblUnidadMedida);
-            this.gbxDatos.Location = new System.Drawing.Point(7, 436);
+            this.gbxDatos.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxDatos.Location = new System.Drawing.Point(7, 466);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(1130, 138);
+            this.gbxDatos.Size = new System.Drawing.Size(1139, 138);
             this.gbxDatos.TabIndex = 7;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos";
@@ -254,9 +257,9 @@
             // 
             this.btnGuardar.Image = global::CpLaFormula.Properties.Resources.saved;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(989, 25);
+            this.btnGuardar.Location = new System.Drawing.Point(989, 22);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(110, 38);
+            this.btnGuardar.Size = new System.Drawing.Size(110, 41);
             this.btnGuardar.TabIndex = 20;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -289,7 +292,7 @@
             this.lblFactor.AutoSize = true;
             this.lblFactor.Location = new System.Drawing.Point(726, 85);
             this.lblFactor.Name = "lblFactor";
-            this.lblFactor.Size = new System.Drawing.Size(67, 20);
+            this.lblFactor.Size = new System.Drawing.Size(66, 19);
             this.lblFactor.TabIndex = 14;
             this.lblFactor.Text = "Margen:";
             // 
@@ -298,7 +301,7 @@
             this.lblPrecioVenta.AutoSize = true;
             this.lblPrecioVenta.Location = new System.Drawing.Point(726, 54);
             this.lblPrecioVenta.Name = "lblPrecioVenta";
-            this.lblPrecioVenta.Size = new System.Drawing.Size(122, 20);
+            this.lblPrecioVenta.Size = new System.Drawing.Size(120, 19);
             this.lblPrecioVenta.TabIndex = 13;
             this.lblPrecioVenta.Text = "Precio de venta:";
             // 
@@ -307,7 +310,7 @@
             this.lblSaldo.AutoSize = true;
             this.lblSaldo.Location = new System.Drawing.Point(726, 22);
             this.lblSaldo.Name = "lblSaldo";
-            this.lblSaldo.Size = new System.Drawing.Size(54, 20);
+            this.lblSaldo.Size = new System.Drawing.Size(50, 19);
             this.lblSaldo.TabIndex = 12;
             this.lblSaldo.Text = "Stock:";
             // 
@@ -330,7 +333,7 @@
             this.lblUbicacion.AutoSize = true;
             this.lblUbicacion.Location = new System.Drawing.Point(387, 83);
             this.lblUbicacion.Name = "lblUbicacion";
-            this.lblUbicacion.Size = new System.Drawing.Size(83, 20);
+            this.lblUbicacion.Size = new System.Drawing.Size(80, 19);
             this.lblUbicacion.TabIndex = 9;
             this.lblUbicacion.Text = "Ubicación:";
             // 
@@ -339,7 +342,7 @@
             this.lblMarca.AutoSize = true;
             this.lblMarca.Location = new System.Drawing.Point(387, 54);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(57, 20);
+            this.lblMarca.Size = new System.Drawing.Size(56, 19);
             this.lblMarca.TabIndex = 8;
             this.lblMarca.Text = "Marca:";
             // 
@@ -349,7 +352,7 @@
             this.cbxCategoria.FormattingEnabled = true;
             this.cbxCategoria.Location = new System.Drawing.Point(491, 19);
             this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(121, 28);
+            this.cbxCategoria.Size = new System.Drawing.Size(121, 27);
             this.cbxCategoria.TabIndex = 7;
             // 
             // lblCategoria
@@ -357,7 +360,7 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Location = new System.Drawing.Point(387, 22);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(82, 20);
+            this.lblCategoria.Size = new System.Drawing.Size(79, 19);
             this.lblCategoria.TabIndex = 6;
             this.lblCategoria.Text = "Categoria:";
             // 
@@ -376,7 +379,7 @@
             this.cbxUnidadMedida.FormattingEnabled = true;
             this.cbxUnidadMedida.Location = new System.Drawing.Point(156, 51);
             this.cbxUnidadMedida.Name = "cbxUnidadMedida";
-            this.cbxUnidadMedida.Size = new System.Drawing.Size(121, 28);
+            this.cbxUnidadMedida.Size = new System.Drawing.Size(121, 27);
             this.cbxUnidadMedida.TabIndex = 4;
             // 
             // txtCodigo
@@ -392,7 +395,7 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Location = new System.Drawing.Point(6, 83);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(96, 20);
+            this.lblDescripcion.Size = new System.Drawing.Size(95, 19);
             this.lblDescripcion.TabIndex = 2;
             this.lblDescripcion.Text = "Descripción:";
             // 
@@ -401,7 +404,7 @@
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Location = new System.Drawing.Point(6, 22);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(63, 20);
+            this.lblCodigo.Size = new System.Drawing.Size(61, 19);
             this.lblCodigo.TabIndex = 1;
             this.lblCodigo.Text = "Codigo:";
             // 
@@ -410,7 +413,7 @@
             this.lblUnidadMedida.AutoSize = true;
             this.lblUnidadMedida.Location = new System.Drawing.Point(6, 54);
             this.lblUnidadMedida.Name = "lblUnidadMedida";
-            this.lblUnidadMedida.Size = new System.Drawing.Size(142, 20);
+            this.lblUnidadMedida.Size = new System.Drawing.Size(138, 19);
             this.lblUnidadMedida.TabIndex = 0;
             this.lblUnidadMedida.Text = "Unidad de Medida:";
             // 
@@ -418,7 +421,7 @@
             // 
             this.btnBuscar.Image = global::CpLaFormula.Properties.Resources.lupa2;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(964, 66);
+            this.btnBuscar.Location = new System.Drawing.Point(966, 104);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(92, 44);
             this.btnBuscar.TabIndex = 4;
@@ -468,7 +471,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.BackgroundImage = global::CpLaFormula.Properties.Resources.fondito;
-            this.ClientSize = new System.Drawing.Size(1136, 571);
+            this.ClientSize = new System.Drawing.Size(1184, 686);
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.pnlAcciones);
             this.Controls.Add(this.gbxLista);
@@ -482,9 +485,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "::: La Formula :::";
+            this.Text = "La Formula ";
             this.Load += new System.EventHandler(this.FrmProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.gbxLista.ResumeLayout(false);

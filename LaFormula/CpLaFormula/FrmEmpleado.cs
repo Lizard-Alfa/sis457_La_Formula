@@ -1,5 +1,6 @@
 ﻿using CadLaFormula;
 using ClnLaFormula;
+using MaterialSkin;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace CpLaFormula
 {
-    public partial class FrmEmpleado : Form
+    public partial class FrmEmpleado : MaterialSkin.Controls.MaterialForm
     {
         private bool esNuevo = false;
         public FrmEmpleado()
@@ -47,9 +48,20 @@ namespace CpLaFormula
 
         private void FrmEmpleado_Load(object sender, EventArgs e)
         {
-            Size = new Size(1116, 463);
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Red800,
+                Primary.Red900,
+                Primary.Red600,
+                Accent.Red100,
+                TextShade.WHITE
+            );
+
+            Size = new Size(1067, 487);
             listar();
         }
+
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -60,7 +72,7 @@ namespace CpLaFormula
         {
             esNuevo = true;
             pnAcionesEm.Enabled = false;
-            Size = new Size(1116, 610);
+            Size = new Size(1067, 652);
             limpiar();
             txtCedulaIdentidad.Focus();
         }
@@ -69,7 +81,7 @@ namespace CpLaFormula
         {
             esNuevo = false;
             pnAcionesEm.Enabled = false;
-            Size = new Size(1116, 610);
+            Size = new Size(1067, 652);
             resetearErrores();
             int id = (int)dgvListar.CurrentRow.Cells["id"].Value;
             var empleado = EmpleadoCln.obtenerUno(id);
@@ -88,7 +100,7 @@ namespace CpLaFormula
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             pnAcionesEm.Enabled = true;
-            Size = new Size(1116, 463);
+            Size = new Size(1067, 487);
         }
         private bool validar()
         {

@@ -79,10 +79,10 @@
             // lblTitulo
             // 
             this.lblTitulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(2, 9);
+            this.lblTitulo.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(1, 70);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(1086, 57);
+            this.lblTitulo.Size = new System.Drawing.Size(1060, 52);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Empleados la formula";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -91,28 +91,30 @@
             // 
             this.lblParametro.AutoSize = true;
             this.lblParametro.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblParametro.Location = new System.Drawing.Point(169, 90);
+            this.lblParametro.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblParametro.Location = new System.Drawing.Point(140, 134);
             this.lblParametro.Name = "lblParametro";
-            this.lblParametro.Size = new System.Drawing.Size(133, 24);
+            this.lblParametro.Size = new System.Drawing.Size(129, 22);
             this.lblParametro.TabIndex = 1;
             this.lblParametro.Text = "Buscar por CI :";
             // 
             // txtParametro
             // 
-            this.txtParametro.Location = new System.Drawing.Point(308, 87);
+            this.txtParametro.Location = new System.Drawing.Point(275, 131);
             this.txtParametro.MaxLength = 10;
             this.txtParametro.Name = "txtParametro";
-            this.txtParametro.Size = new System.Drawing.Size(410, 29);
+            this.txtParametro.Size = new System.Drawing.Size(373, 30);
             this.txtParametro.TabIndex = 2;
             this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress);
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = global::CpLaFormula.Properties.Resources.lupa2;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(726, 79);
+            this.btnBuscar.Location = new System.Drawing.Point(654, 125);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(110, 47);
+            this.btnBuscar.Size = new System.Drawing.Size(100, 43);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -125,21 +127,21 @@
             this.dgvListar.AllowUserToDeleteRows = false;
             this.dgvListar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListar.Location = new System.Drawing.Point(6, 28);
+            this.dgvListar.Location = new System.Drawing.Point(5, 26);
             this.dgvListar.MultiSelect = false;
             this.dgvListar.Name = "dgvListar";
             this.dgvListar.ReadOnly = true;
             this.dgvListar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListar.Size = new System.Drawing.Size(1064, 184);
+            this.dgvListar.Size = new System.Drawing.Size(1044, 219);
             this.dgvListar.TabIndex = 4;
             // 
             // gbxLista
             // 
             this.gbxLista.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.gbxLista.Controls.Add(this.dgvListar);
-            this.gbxLista.Location = new System.Drawing.Point(12, 132);
+            this.gbxLista.Location = new System.Drawing.Point(6, 167);
             this.gbxLista.Name = "gbxLista";
-            this.gbxLista.Size = new System.Drawing.Size(1076, 218);
+            this.gbxLista.Size = new System.Drawing.Size(1055, 251);
             this.gbxLista.TabIndex = 6;
             this.gbxLista.TabStop = false;
             this.gbxLista.Text = "Lista de Empleados :";
@@ -151,18 +153,19 @@
             this.pnAcionesEm.Controls.Add(this.btnEliminar);
             this.pnAcionesEm.Controls.Add(this.btnEditar);
             this.pnAcionesEm.Controls.Add(this.btnNuevo);
-            this.pnAcionesEm.Location = new System.Drawing.Point(18, 357);
+            this.pnAcionesEm.Location = new System.Drawing.Point(6, 424);
             this.pnAcionesEm.Name = "pnAcionesEm";
-            this.pnAcionesEm.Size = new System.Drawing.Size(1064, 62);
+            this.pnAcionesEm.Size = new System.Drawing.Size(1055, 57);
             this.pnAcionesEm.TabIndex = 7;
             // 
             // btnCerrar
             // 
+            this.btnCerrar.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.Image = global::CpLaFormula.Properties.Resources.cerrar;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(611, 9);
+            this.btnCerrar.Location = new System.Drawing.Point(621, 8);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(106, 44);
+            this.btnCerrar.Size = new System.Drawing.Size(100, 40);
             this.btnCerrar.TabIndex = 12;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -171,11 +174,12 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = global::CpLaFormula.Properties.Resources.borrar;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(489, 9);
+            this.btnEliminar.Location = new System.Drawing.Point(483, 8);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(116, 44);
+            this.btnEliminar.Size = new System.Drawing.Size(123, 40);
             this.btnEliminar.TabIndex = 11;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -184,11 +188,12 @@
             // 
             // btnEditar
             // 
+            this.btnEditar.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = global::CpLaFormula.Properties.Resources.edit2;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(382, 9);
+            this.btnEditar.Location = new System.Drawing.Point(366, 8);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(101, 44);
+            this.btnEditar.Size = new System.Drawing.Size(101, 40);
             this.btnEditar.TabIndex = 10;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -197,11 +202,12 @@
             // 
             // btnNuevo
             // 
+            this.btnNuevo.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Image = global::CpLaFormula.Properties.Resources.savess;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(265, 9);
+            this.btnNuevo.Location = new System.Drawing.Point(241, 8);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(110, 45);
+            this.btnNuevo.Size = new System.Drawing.Size(109, 41);
             this.btnNuevo.TabIndex = 9;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -229,27 +235,28 @@
             this.gbxDatos.Controls.Add(this.lblSegundoApellido);
             this.gbxDatos.Controls.Add(this.lblNombre);
             this.gbxDatos.Controls.Add(this.lblCedulaIdentidad);
-            this.gbxDatos.Location = new System.Drawing.Point(18, 426);
+            this.gbxDatos.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxDatos.Location = new System.Drawing.Point(6, 487);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(1070, 144);
+            this.gbxDatos.Size = new System.Drawing.Size(1055, 160);
             this.gbxDatos.TabIndex = 8;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos :";
             // 
             // dtpFechaNaciemiento
             // 
-            this.dtpFechaNaciemiento.Location = new System.Drawing.Point(504, 58);
+            this.dtpFechaNaciemiento.Location = new System.Drawing.Point(462, 61);
             this.dtpFechaNaciemiento.Name = "dtpFechaNaciemiento";
-            this.dtpFechaNaciemiento.Size = new System.Drawing.Size(143, 29);
+            this.dtpFechaNaciemiento.Size = new System.Drawing.Size(130, 30);
             this.dtpFechaNaciemiento.TabIndex = 24;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Image = global::CpLaFormula.Properties.Resources.cerrar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(891, 89);
+            this.btnCancelar.Location = new System.Drawing.Point(915, 101);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(127, 43);
+            this.btnCancelar.Size = new System.Drawing.Size(115, 39);
             this.btnCancelar.TabIndex = 23;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -260,9 +267,9 @@
             // 
             this.btnGuardar.Image = global::CpLaFormula.Properties.Resources.saved;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(763, 87);
+            this.btnGuardar.Location = new System.Drawing.Point(758, 101);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(122, 45);
+            this.btnGuardar.Size = new System.Drawing.Size(111, 41);
             this.btnGuardar.TabIndex = 22;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -271,129 +278,129 @@
             // 
             // txtCargo
             // 
-            this.txtCargo.Location = new System.Drawing.Point(834, 54);
+            this.txtCargo.Location = new System.Drawing.Point(758, 56);
             this.txtCargo.MaxLength = 50;
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(142, 29);
+            this.txtCargo.Size = new System.Drawing.Size(129, 30);
             this.txtCargo.TabIndex = 17;
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(834, 19);
+            this.txtCelular.Location = new System.Drawing.Point(758, 23);
             this.txtCelular.MaxLength = 20;
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(142, 29);
+            this.txtCelular.Size = new System.Drawing.Size(129, 30);
             this.txtCelular.TabIndex = 16;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(504, 91);
+            this.txtDireccion.Location = new System.Drawing.Point(462, 91);
             this.txtDireccion.MaxLength = 250;
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(143, 29);
+            this.txtDireccion.Size = new System.Drawing.Size(130, 30);
             this.txtDireccion.TabIndex = 15;
             // 
             // txtSegundoApellido
             // 
-            this.txtSegundoApellido.Location = new System.Drawing.Point(504, 22);
+            this.txtSegundoApellido.Location = new System.Drawing.Point(462, 28);
             this.txtSegundoApellido.MaxLength = 50;
             this.txtSegundoApellido.Name = "txtSegundoApellido";
-            this.txtSegundoApellido.Size = new System.Drawing.Size(143, 29);
+            this.txtSegundoApellido.Size = new System.Drawing.Size(130, 30);
             this.txtSegundoApellido.TabIndex = 13;
             // 
             // txtPrimerApellido
             // 
-            this.txtPrimerApellido.Location = new System.Drawing.Point(165, 88);
+            this.txtPrimerApellido.Location = new System.Drawing.Point(154, 89);
             this.txtPrimerApellido.MaxLength = 50;
             this.txtPrimerApellido.Name = "txtPrimerApellido";
-            this.txtPrimerApellido.Size = new System.Drawing.Size(142, 29);
+            this.txtPrimerApellido.Size = new System.Drawing.Size(129, 30);
             this.txtPrimerApellido.TabIndex = 12;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(165, 56);
+            this.txtNombre.Location = new System.Drawing.Point(154, 59);
             this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(142, 29);
+            this.txtNombre.Size = new System.Drawing.Size(129, 30);
             this.txtNombre.TabIndex = 11;
             // 
             // txtCedulaIdentidad
             // 
-            this.txtCedulaIdentidad.Location = new System.Drawing.Point(165, 21);
+            this.txtCedulaIdentidad.Location = new System.Drawing.Point(154, 27);
             this.txtCedulaIdentidad.MaxLength = 12;
             this.txtCedulaIdentidad.Name = "txtCedulaIdentidad";
-            this.txtCedulaIdentidad.Size = new System.Drawing.Size(142, 29);
+            this.txtCedulaIdentidad.Size = new System.Drawing.Size(129, 30);
             this.txtCedulaIdentidad.TabIndex = 10;
             // 
             // lblCargo
             // 
             this.lblCargo.AutoSize = true;
-            this.lblCargo.Location = new System.Drawing.Point(653, 58);
+            this.lblCargo.Location = new System.Drawing.Point(686, 61);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(66, 24);
+            this.lblCargo.Size = new System.Drawing.Size(62, 22);
             this.lblCargo.TabIndex = 9;
             this.lblCargo.Text = "Cargo:";
             // 
             // lblCelular
             // 
             this.lblCelular.AutoSize = true;
-            this.lblCelular.Location = new System.Drawing.Point(653, 24);
+            this.lblCelular.Location = new System.Drawing.Point(594, 28);
             this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(175, 24);
+            this.lblCelular.Size = new System.Drawing.Size(168, 22);
             this.lblCelular.TabIndex = 8;
             this.lblCelular.Text = "Numero de Celular:";
             // 
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(313, 87);
+            this.lblDireccion.Location = new System.Drawing.Point(289, 88);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(95, 24);
+            this.lblDireccion.Size = new System.Drawing.Size(92, 22);
             this.lblDireccion.TabIndex = 7;
             this.lblDireccion.Text = "Dirección:";
             // 
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(313, 58);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(289, 61);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(193, 24);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(178, 22);
             this.lblFechaNacimiento.TabIndex = 6;
             this.lblFechaNacimiento.Text = "Fecha de nacimiento:";
             // 
             // lblPrimerApellido
             // 
             this.lblPrimerApellido.AutoSize = true;
-            this.lblPrimerApellido.Location = new System.Drawing.Point(15, 88);
+            this.lblPrimerApellido.Location = new System.Drawing.Point(18, 89);
             this.lblPrimerApellido.Name = "lblPrimerApellido";
-            this.lblPrimerApellido.Size = new System.Drawing.Size(153, 24);
+            this.lblPrimerApellido.Size = new System.Drawing.Size(151, 22);
             this.lblPrimerApellido.TabIndex = 5;
             this.lblPrimerApellido.Text = "Apellido paterno:";
             // 
             // lblSegundoApellido
             // 
             this.lblSegundoApellido.AutoSize = true;
-            this.lblSegundoApellido.Location = new System.Drawing.Point(313, 24);
+            this.lblSegundoApellido.Location = new System.Drawing.Point(289, 30);
             this.lblSegundoApellido.Name = "lblSegundoApellido";
-            this.lblSegundoApellido.Size = new System.Drawing.Size(158, 24);
+            this.lblSegundoApellido.Size = new System.Drawing.Size(156, 22);
             this.lblSegundoApellido.TabIndex = 4;
             this.lblSegundoApellido.Text = "Apellido Materno:";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(15, 59);
+            this.lblNombre.Location = new System.Drawing.Point(18, 62);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(84, 24);
+            this.lblNombre.Size = new System.Drawing.Size(81, 22);
             this.lblNombre.TabIndex = 3;
             this.lblNombre.Text = "Nombre:";
             // 
             // lblCedulaIdentidad
             // 
             this.lblCedulaIdentidad.AutoSize = true;
-            this.lblCedulaIdentidad.Location = new System.Drawing.Point(15, 25);
+            this.lblCedulaIdentidad.Location = new System.Drawing.Point(18, 31);
             this.lblCedulaIdentidad.Name = "lblCedulaIdentidad";
-            this.lblCedulaIdentidad.Size = new System.Drawing.Size(37, 24);
+            this.lblCedulaIdentidad.Size = new System.Drawing.Size(36, 22);
             this.lblCedulaIdentidad.TabIndex = 2;
             this.lblCedulaIdentidad.Text = "CI :";
             // 
@@ -424,11 +431,11 @@
             // 
             // FrmEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.BackgroundImage = global::CpLaFormula.Properties.Resources.fondito;
-            this.ClientSize = new System.Drawing.Size(1100, 571);
+            this.ClientSize = new System.Drawing.Size(1099, 730);
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.pnAcionesEm);
             this.Controls.Add(this.gbxLista);
@@ -436,14 +443,16 @@
             this.Controls.Add(this.txtParametro);
             this.Controls.Add(this.lblParametro);
             this.Controls.Add(this.lblTitulo);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmEmpleado";
+            this.Padding = new System.Windows.Forms.Padding(3, 59, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "::: Empleados La Formula :::";
+            this.Text = "Empleados La Formula";
             this.Load += new System.EventHandler(this.FrmEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
             this.gbxLista.ResumeLayout(false);

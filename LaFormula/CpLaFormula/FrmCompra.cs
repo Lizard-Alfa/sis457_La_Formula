@@ -1,15 +1,16 @@
 ﻿using CadLaFormula;
 using ClnLaFormula;
+using MaterialSkin;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Windows.Forms;
 using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Windows.Forms;
 
 namespace CpLaFormula
 {
-    public partial class FrmCompra : Form
+    public partial class FrmCompra : MaterialSkin.Controls.MaterialForm
     {
         private List<CompraDetalle> detalle = new List<CompraDetalle>();
         private decimal total = 0;
@@ -18,6 +19,16 @@ namespace CpLaFormula
 
         private void FrmCompra_Load(object sender, EventArgs e)
         {
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Red800,
+                Primary.Red900,
+                Primary.Red600,
+                Accent.Red100,
+                TextShade.WHITE
+            );
             Size = new Size(845, 500);
             cboProveedor.DataSource = ProveedorCln.listar();
             cboProveedor.DisplayMember = "razonSocial";
