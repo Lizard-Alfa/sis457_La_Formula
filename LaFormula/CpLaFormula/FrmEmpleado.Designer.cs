@@ -92,7 +92,7 @@
             this.lblParametro.AutoSize = true;
             this.lblParametro.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblParametro.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblParametro.Location = new System.Drawing.Point(140, 134);
+            this.lblParametro.Location = new System.Drawing.Point(7, 131);
             this.lblParametro.Name = "lblParametro";
             this.lblParametro.Size = new System.Drawing.Size(129, 22);
             this.lblParametro.TabIndex = 1;
@@ -100,7 +100,7 @@
             // 
             // txtParametro
             // 
-            this.txtParametro.Location = new System.Drawing.Point(275, 131);
+            this.txtParametro.Location = new System.Drawing.Point(178, 132);
             this.txtParametro.MaxLength = 10;
             this.txtParametro.Name = "txtParametro";
             this.txtParametro.Size = new System.Drawing.Size(373, 30);
@@ -435,7 +435,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.BackgroundImage = global::CpLaFormula.Properties.Resources.fondito;
-            this.ClientSize = new System.Drawing.Size(1099, 730);
+            this.ClientSize = new System.Drawing.Size(1069, 769);
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.pnAcionesEm);
             this.Controls.Add(this.gbxLista);

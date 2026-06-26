@@ -284,6 +284,12 @@
   <ItemGroup>
     <None Include="Resources\billeteras.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscarsd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoblanco.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -113,6 +113,16 @@ namespace CpLaFormula.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buscarsd {
+            get {
+                object obj = ResourceManager.GetObject("buscarsd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap caja {
             get {
                 object obj = ResourceManager.GetObject("caja", resourceCulture);
@@ -246,6 +256,16 @@ namespace CpLaFormula.Properties {
         internal static System.Drawing.Bitmap fondo12 {
             get {
                 object obj = ResourceManager.GetObject("fondo12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondoblanco {
+            get {
+                object obj = ResourceManager.GetObject("fondoblanco", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

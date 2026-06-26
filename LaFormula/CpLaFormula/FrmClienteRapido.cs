@@ -19,7 +19,6 @@ namespace CpLaFormula
         private void FrmClienteRapido_Load(object sender, EventArgs e)
         {
             var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(
                 Primary.Red800,

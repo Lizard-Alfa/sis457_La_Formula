@@ -82,10 +82,7 @@ namespace CpLaFormula
             btnEliminarPago.Click += btnEliminarPago_Click;
             txtAgregarMonto.TextChanged += CalcularTotalesPagos;
         }
-
-        // ============================================
         // AGREGAR PAGO
-        // ============================================
         private void btnAgregarPago_Click(object sender, EventArgs e)
         {
             try
@@ -113,10 +110,7 @@ namespace CpLaFormula
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // ============================================
         // ELIMINAR PAGO
-        // ============================================
         private void btnEliminarPago_Click(object sender, EventArgs e)
         {
             if (dgvPagos.CurrentRow == null)
@@ -138,10 +132,7 @@ namespace CpLaFormula
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // ============================================
         // ACTUALIZAR DATAGRIDVIEW DE PAGOS
-        // ============================================
         private void actualizarDataGridViewPagos()
         {
             dgvPagos.Rows.Clear();
@@ -150,10 +141,7 @@ namespace CpLaFormula
                 dgvPagos.Rows.Add(listaMetodosPago[i], listaMontosPago[i]);
             }
         }
-
-        // ============================================
         // CALCULAR TOTAL PAGADO Y CAMBIO
-        // ============================================
         private void CalcularTotalesPagos(object sender, EventArgs e)
         {
             try
@@ -192,10 +180,7 @@ namespace CpLaFormula
             }
             catch { }
         }
-
-        // ============================================
         // CARGAR CLIENTES
-        // ============================================
         private void cargarClientes()
         {
             try
@@ -218,15 +203,11 @@ namespace CpLaFormula
                 MessageBox.Show($"Error al cargar clientes: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // ============================================
         // BUSCAR CLIENTES
-        // ============================================
         private void txtBuscarCliente_TextChanged(object sender, EventArgs e)
         {
             buscarClientes();
         }
-
         private void buscarClientes()
         {
             try
@@ -252,10 +233,7 @@ namespace CpLaFormula
                 MessageBox.Show($"Error al buscar clientes: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // ============================================
         // CONFIGURAR DATAGRIDVIEWS
-        // ============================================
         private void configurarDataGridViews()
         {
             dgvDetalleVenta.Columns.Clear();
@@ -271,10 +249,7 @@ namespace CpLaFormula
             dgvDetalleVenta.Columns["subtotal"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dgvDetalleVenta.Columns["subtotal"].DefaultCellStyle.Format = "N2";
         }
-
-        // ============================================
         // CARGAR PRODUCTOS
-        // ============================================
         private void cargarProductos()
         {
             try
@@ -317,10 +292,7 @@ namespace CpLaFormula
                 MessageBox.Show($"Error al cargar productos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // ============================================
         // BUSCAR PRODUCTOS
-        // ============================================
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
             buscarProductos();
@@ -368,10 +340,7 @@ namespace CpLaFormula
                 e.Handled = true;
             }
         }
-
-        // ============================================
         // AGREGAR PRODUCTO AL DETALLE
-        // ============================================
         private void dgvProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -449,26 +418,20 @@ namespace CpLaFormula
         {
             agregarProductoAlDetalle();
         }
-
-        // ============================================
         // ACTUALIZAR DETALLE
-        // ============================================
-        // ============================================
-        // ACTUALIZAR DETALLE (CON MANTENIMIENTO DE SELECCIÓN)
-        // ============================================
         private void actualizarDetalleDataGridView()
         {
-            // 1. GUARDAR: El ID del producto seleccionado actualmente
+            //  GUARDAR: El ID del producto seleccionado actualmente
             int? idProductoSeleccionado = null;
             if (dgvDetalleVenta.CurrentRow != null)
             {
                 idProductoSeleccionado = Convert.ToInt32(dgvDetalleVenta.CurrentRow.Cells["idProducto"].Value);
             }
 
-            // 2. LIMPIAR: El DataGridView
+            // LIMPIAR: El DataGridView
             dgvDetalleVenta.Rows.Clear();
 
-            // 3. RECARGAR: Todos los productos del detalle
+            // RECARGAR: Todos los productos del detalle
             foreach (var item in listaDetalle)
             {
                 // Buscar el producto en el DataGridView de productos
@@ -495,7 +458,7 @@ namespace CpLaFormula
                 );
             }
 
-            // 4. RESTAURAR: La selección anterior
+            // RESTAURAR: La selección anterior
             if (idProductoSeleccionado.HasValue)
             {
                 foreach (DataGridViewRow row in dgvDetalleVenta.Rows)
@@ -510,10 +473,7 @@ namespace CpLaFormula
                 }
             }
         }
-
-        // ============================================
         // CALCULAR TOTAL
-        // ============================================
         private void calcularTotal()
         {
             totalVenta = 0;
@@ -524,10 +484,7 @@ namespace CpLaFormula
             lblValorTotal.Text = $"{totalVenta:N2} Bs.";
             CalcularTotalesPagos(null, null);
         }
-
-        // ============================================
         // ELIMINAR PRODUCTO DEL DETALLE
-        // ============================================
         private void btnEliminarDetalle_Click(object sender, EventArgs e)
         {
             if (dgvDetalleVenta.CurrentRow == null)
@@ -544,10 +501,7 @@ namespace CpLaFormula
                 calcularTotal();
             }
         }
-
-        // ============================================
         // AUMENTAR CANTIDAD
-        // ============================================
         private void btnAumentar_Click(object sender, EventArgs e)
         {
             if (dgvDetalleVenta.CurrentRow == null)
@@ -595,10 +549,7 @@ namespace CpLaFormula
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // ============================================
         // DISMINUIR CANTIDAD
-        // ============================================
         private void btnDisminuir_Click(object sender, EventArgs e)
         {
             if (dgvDetalleVenta.CurrentRow == null)
@@ -634,10 +585,7 @@ namespace CpLaFormula
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // ============================================
         // VALIDAR
-        // ============================================
         private bool validar()
         {
             bool esValido = true;
@@ -682,10 +630,7 @@ namespace CpLaFormula
 
             return esValido;
         }
-
-        // ============================================
         // GUARDAR VENTA
-        // ============================================
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (!validar()) return;
@@ -727,7 +672,7 @@ namespace CpLaFormula
                     totalPagado += monto;
                 }
 
-                MessageBox.Show($"✅ Venta registrada exitosamente.\n\n" +
+                MessageBox.Show($" Venta registrada exitosamente.\n\n" +
                                 $"ID: {idVenta}\n" +
                                 $"Total: {totalVenta:N2} Bs.\n" +
                                 $"Pagado: {totalPagado:N2} Bs.\n" +
@@ -742,10 +687,7 @@ namespace CpLaFormula
                 MessageBox.Show($"Error al registrar la venta: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // ============================================
         // LIMPIAR
-        // ============================================
         private void limpiar()
         {
             cboCliente.SelectedIndex = 0;
@@ -772,10 +714,6 @@ namespace CpLaFormula
             cargarClientes();
             cboCliente.Focus();
         }
-
-        // ============================================
-        // OTROS EVENTOS
-        // ============================================
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             limpiar();

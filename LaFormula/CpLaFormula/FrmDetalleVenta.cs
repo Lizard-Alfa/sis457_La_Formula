@@ -16,11 +16,9 @@ namespace CpLaFormula
             this.idVenta = idVenta;
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-
         private void FrmDetalleVenta_Load(object sender, EventArgs e)
         {
             var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(
                 Primary.Red800,
@@ -29,10 +27,8 @@ namespace CpLaFormula
                 Accent.Red100,
                 TextShade.WHITE
             );
-
             cargarDetalle();
         }
-
         private void cargarDetalle()
         {
             try
@@ -44,26 +40,22 @@ namespace CpLaFormula
                     this.Close();
                     return;
                 }
-
                 // Mostrar información de la venta
                 lblIdVenta.Text = $"ID: {venta.id}";
                 lblFecha.Text = $"Fecha: {venta.fecha.ToString("dd/MM/yyyy HH:mm")}";
                 lblCliente.Text = $"Cliente: {venta.Cliente?.nombres ?? "Sin Cliente"}";
                 lblVendedor.Text = $"Vendedor: {venta.Usuario?.usuario1 ?? "Sistema"}";
                 lblTotal.Text = $"Total: {venta.total:N2} Bs.";
-
                 // Mostrar método de pago
                 string metodoPago = venta.metodoPago ?? "EFECTIVO";
                 string pagos = venta.pagos ?? metodoPago;
                 lblMetodoPago.Text = $"Pago: {pagos}";
-
-                // ✅ MOSTRAR PAGADO Y CAMBIO
+                //MOSTRAR PAGADO Y CAMBIO
                 decimal totalPagado = CalcularTotalPagado(venta.pagos, venta.total);
                 decimal cambio = totalPagado - venta.total;
                 lblPagado.Text = $"Pagado: {totalPagado:N2} Bs.";
                 lblCambio.Text = $"Cambio: {cambio:N2} Bs.";
                 lblCambio.ForeColor = cambio >= 0 ? System.Drawing.Color.Green : System.Drawing.Color.Red;
-
                 // Mostrar detalles de productos
                 var detalles = VentaCln.obtenerDetallesPorVenta(venta.id);
                 dgvDetalles.DataSource = detalles.Select(d => new
@@ -79,15 +71,6 @@ namespace CpLaFormula
                 dgvDetalles.Columns["Cantidad"].HeaderText = "Cantidad";
                 dgvDetalles.Columns["PrecioUnitario"].HeaderText = "Precio Unit.";
                 dgvDetalles.Columns["Subtotal"].HeaderText = "Subtotal";
-
-                dgvDetalles.Columns["Cantidad"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                dgvDetalles.Columns["PrecioUnitario"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                dgvDetalles.Columns["Subtotal"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
-                dgvDetalles.Columns["Producto"].Width = 300;
-                dgvDetalles.Columns["Cantidad"].Width = 100;
-                dgvDetalles.Columns["PrecioUnitario"].Width = 120;
-                dgvDetalles.Columns["Subtotal"].Width = 120;
             }
             catch (Exception ex)
             {
@@ -95,7 +78,7 @@ namespace CpLaFormula
             }
         }
 
-        // ✅ MÉTODO PARA CALCULAR EL TOTAL PAGADO
+        // MÉTODO PARA CALCULAR EL TOTAL PAGADO
         private decimal CalcularTotalPagado(string pagos, decimal totalVenta)
         {
             if (string.IsNullOrEmpty(pagos))

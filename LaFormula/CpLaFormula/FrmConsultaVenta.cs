@@ -19,7 +19,6 @@ namespace CpLaFormula
         private void FrmConsultaVenta_Load(object sender, EventArgs e)
         {
             var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(
                 Primary.Red800,
@@ -30,7 +29,6 @@ namespace CpLaFormula
             );
             cargarVentas();
         }
-
         private void cargarVentas()
         {
             try
@@ -51,30 +49,23 @@ namespace CpLaFormula
                 }).ToList();
 
                 if (dgvVentas.Columns["id"] != null)
-                    dgvVentas.Columns["id"].Visible = false;
-
+                dgvVentas.Columns["id"].Visible = false;
                 dgvVentas.Columns["Fecha"].HeaderText = "Fecha";
                 dgvVentas.Columns["Cliente"].HeaderText = "Cliente";
                 dgvVentas.Columns["Vendedor"].HeaderText = "Vendedor";
                 dgvVentas.Columns["Total"].HeaderText = "Total Bs.";
                 dgvVentas.Columns["pagos"].HeaderText = "Método Pago";
                 dgvVentas.Columns["Estado"].HeaderText = "Estado";
-
+                dgvVentas.Columns["Fecha"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 dgvVentas.Columns["Total"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 dgvVentas.Columns["Total"].DefaultCellStyle.Format = "N2";
-
-                // Colorear filas según estado
+                dgvVentas.Columns["Fecha"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvVentas.Columns["pagos"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 foreach (DataGridViewRow row in dgvVentas.Rows)
                 {
                     string estado = row.Cells["Estado"].Value.ToString();
                     if (estado == "Anulada")
                     {
-                        row.DefaultCellStyle.ForeColor = Color.Red;
-                        row.DefaultCellStyle.Font = new Font(dgvVentas.Font, FontStyle.Strikeout);
-                    }
-                    else
-                    {
-                        row.DefaultCellStyle.ForeColor = Color.Green;
                     }
                 }
 
@@ -87,10 +78,7 @@ namespace CpLaFormula
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // ============================================
-        // BOTÓN ANULAR
-        // ============================================
+               // BOTÓN ANULAR
         private void btnAnular_Click(object sender, EventArgs e)
         {
             if (dgvVentas.CurrentRow == null)
@@ -119,13 +107,13 @@ namespace CpLaFormula
 
                     if (exito)
                     {
-                        MessageBox.Show("✅ Venta anulada. Stock restaurado.",
+                        MessageBox.Show("Venta anulada. Stock restaurado.",
                             "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         cargarVentas();
                     }
                     else
                     {
-                        MessageBox.Show("❌ No se pudo anular la venta.",
+                        MessageBox.Show("No se pudo anular la venta.",
                             "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -135,15 +123,6 @@ namespace CpLaFormula
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // ============================================
-        // BOTÓN VER DETALLE
-        // ============================================
-        
-
-        // ============================================
-        // BOTÓN CERRAR
-        // ============================================
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
