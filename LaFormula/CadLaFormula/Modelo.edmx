@@ -142,6 +142,8 @@
           <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
           <Property Name="estado" Type="int" Nullable="false" />
+          <Property Name="metodoPago" Type="varchar" MaxLength="20" />
+          <Property Name="pagos" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="VentaDetalle">
           <Key>
@@ -349,11 +351,6 @@
         <Function Name="paProductoObtenerPorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
         </Function>
-        <Function Name="paVentaRegistrar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="idCliente" Type="int" Mode="In" />
-          <Parameter Name="idUsuario" Type="int" Mode="In" />
-          <Parameter Name="detalles" Type="nvarchar(max)" Mode="In" />
-        </Function>
         <EntityContainer Name="LabLaFormulaModelStoreContainer">
           <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
@@ -474,22 +471,6 @@
           <Property Name="estado" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Producto" Relationship="Self.fk_Producto_UnidadMedida" FromRole="UnidadMedida" ToRole="Producto" />
         </EntityType>
-        <EntityType Name="Venta">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="idCliente" Type="Int32" Nullable="false" />
-          <Property Name="idUsuario" Type="Int32" Nullable="false" />
-          <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="total" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="estado" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="VentaDetalle" Relationship="Self.fk_VentaDetalle_Venta" FromRole="Venta" ToRole="VentaDetalle" />
-          <NavigationProperty Name="Cliente" Relationship="LabLaFormulaModel.fk_Venta_Cliente" FromRole="Venta" ToRole="Cliente" />
-          <NavigationProperty Name="Usuario" Relationship="LabLaFormulaModel.fk_Venta_Usuario" FromRole="Venta" ToRole="Usuario" />
-        </EntityType>
         <EntityType Name="VentaDetalle">
           <Key>
             <PropertyRef Name="id" />
@@ -504,7 +485,7 @@
           <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="estado" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Producto" Relationship="Self.fk_VentaDetalle_Producto" FromRole="VentaDetalle" ToRole="Producto" />
-          <NavigationProperty Name="Venta" Relationship="Self.fk_VentaDetalle_Venta" FromRole="VentaDetalle" ToRole="Venta" />
+          <NavigationProperty Name="Venta" Relationship="LabLaFormulaModel.fk_VentaDetalle_Venta" FromRole="VentaDetalle" ToRole="Venta" />
         </EntityType>
         <Association Name="fk_Producto_Categoria">
           <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
@@ -542,24 +523,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_VentaDetalle_Venta">
-          <End Role="Venta" Type="Self.Venta" Multiplicity="1" />
-          <End Role="VentaDetalle" Type="Self.VentaDetalle" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Venta">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="VentaDetalle">
-              <PropertyRef Name="idVenta" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="LabLaFormulaEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Categoria" EntityType="Self.Categoria" />
           <EntitySet Name="Empleado" EntityType="Self.Empleado" />
           <EntitySet Name="Producto" EntityType="Self.Producto" />
           <EntitySet Name="UnidadMedida" EntityType="Self.UnidadMedida" />
-          <EntitySet Name="Venta" EntityType="Self.Venta" />
           <EntitySet Name="VentaDetalle" EntityType="Self.VentaDetalle" />
           <AssociationSet Name="fk_Producto_Categoria" Association="Self.fk_Producto_Categoria">
             <End Role="Categoria" EntitySet="Categoria" />
@@ -571,10 +539,6 @@
           </AssociationSet>
           <AssociationSet Name="fk_VentaDetalle_Producto" Association="Self.fk_VentaDetalle_Producto">
             <End Role="Producto" EntitySet="Producto" />
-            <End Role="VentaDetalle" EntitySet="VentaDetalle" />
-          </AssociationSet>
-          <AssociationSet Name="fk_VentaDetalle_Venta" Association="Self.fk_VentaDetalle_Venta">
-            <End Role="Venta" EntitySet="Venta" />
             <End Role="VentaDetalle" EntitySet="VentaDetalle" />
           </AssociationSet>
           <FunctionImport Name="paProductoListar" ReturnType="Collection(LabLaFormulaModel.paProductoListar_Result)">
@@ -620,17 +584,9 @@
           </FunctionImport>
           <EntitySet Name="Cliente" EntityType="LabLaFormulaModel.Cliente" />
           <EntitySet Name="Usuario" EntityType="LabLaFormulaModel.Usuario" />
-          <AssociationSet Name="fk_Venta_Cliente" Association="LabLaFormulaModel.fk_Venta_Cliente">
-            <End EntitySet="Cliente" Role="Cliente" />
-            <End EntitySet="Venta" Role="Venta" />
-          </AssociationSet>
           <AssociationSet Name="fk_Usuario_Empleado" Association="LabLaFormulaModel.fk_Usuario_Empleado">
             <End EntitySet="Empleado" Role="Empleado" />
             <End EntitySet="Usuario" Role="Usuario" />
-          </AssociationSet>
-          <AssociationSet Name="fk_Venta_Usuario" Association="LabLaFormulaModel.fk_Venta_Usuario">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Venta" EntitySet="Venta" />
           </AssociationSet>
           <EntitySet Name="Compra" EntityType="LabLaFormulaModel.Compra" />
           <EntitySet Name="CompraDetalle" EntityType="LabLaFormulaModel.CompraDetalle" />
@@ -683,6 +639,19 @@
             <Parameter Name="fecha" Mode="In" Type="DateTime" />
             <Parameter Name="detalles" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="Venta" EntityType="LabLaFormulaModel.Venta" />
+          <AssociationSet Name="fk_Venta_Cliente" Association="LabLaFormulaModel.fk_Venta_Cliente">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Venta" EntitySet="Venta" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Venta_Usuario" Association="LabLaFormulaModel.fk_Venta_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Venta" EntitySet="Venta" />
+          </AssociationSet>
+          <AssociationSet Name="fk_VentaDetalle_Venta" Association="LabLaFormulaModel.fk_VentaDetalle_Venta">
+            <End Role="Venta" EntitySet="Venta" />
+            <End Role="VentaDetalle" EntitySet="VentaDetalle" />
+          </AssociationSet>
           </EntityContainer>
         <ComplexType Name="paProductoListar_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -752,18 +721,6 @@
           <NavigationProperty Name="Empleado" Relationship="LabLaFormulaModel.fk_Usuario_Empleado" FromRole="Usuario" ToRole="Empleado" />
           <NavigationProperty Name="Venta" Relationship="LabLaFormulaModel.fk_Venta_Usuario" FromRole="Usuario" ToRole="Venta" />
         </EntityType>
-        <Association Name="fk_Venta_Cliente">
-          <End Type="LabLaFormulaModel.Cliente" Multiplicity="1" Role="Cliente" />
-          <End Type="LabLaFormulaModel.Venta" Multiplicity="*" Role="Venta" />
-          <ReferentialConstraint>
-            <Principal Role="Cliente">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Venta">
-              <PropertyRef Name="idCliente" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="fk_Usuario_Empleado">
           <End Type="LabLaFormulaModel.Empleado" Multiplicity="1" Role="Empleado" />
           <End Type="LabLaFormulaModel.Usuario" Multiplicity="*" Role="Usuario" />
@@ -773,18 +730,6 @@
             </Principal>
             <Dependent Role="Usuario">
               <PropertyRef Name="idEmpleado" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_Venta_Usuario">
-          <End Type="LabLaFormulaModel.Usuario" Role="Usuario" Multiplicity="1" />
-          <End Type="LabLaFormulaModel.Venta" Role="Venta" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Usuario">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Venta">
-              <PropertyRef Name="idUsuario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -896,6 +841,60 @@
           <Property Type="String" Name="cargo" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="estado" Nullable="false" />
         </ComplexType>
+        <EntityType Name="Venta">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idCliente" Type="Int32" Nullable="false" />
+          <Property Name="idUsuario" Type="Int32" Nullable="false" />
+          <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="total" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="usuarioRegistro" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="estado" Type="Int32" Nullable="false" />
+          <Property Name="metodoPago" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pagos" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Cliente" Relationship="LabLaFormulaModel.fk_Venta_Cliente" FromRole="Venta" ToRole="Cliente" />
+          <NavigationProperty Name="Usuario" Relationship="LabLaFormulaModel.fk_Venta_Usuario" FromRole="Venta" ToRole="Usuario" />
+          <NavigationProperty Name="VentaDetalle" Relationship="LabLaFormulaModel.fk_VentaDetalle_Venta" FromRole="Venta" ToRole="VentaDetalle" />
+        </EntityType>
+        <Association Name="fk_Venta_Cliente">
+          <End Type="LabLaFormulaModel.Cliente" Role="Cliente" Multiplicity="1" />
+          <End Type="LabLaFormulaModel.Venta" Role="Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Venta">
+              <PropertyRef Name="idCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Venta_Usuario">
+          <End Type="LabLaFormulaModel.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="LabLaFormulaModel.Venta" Role="Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Venta">
+              <PropertyRef Name="idUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_VentaDetalle_Venta">
+          <End Type="LabLaFormulaModel.Venta" Role="Venta" Multiplicity="1" />
+          <End Type="LabLaFormulaModel.VentaDetalle" Role="VentaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Venta">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="VentaDetalle">
+              <PropertyRef Name="idVenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -956,20 +955,6 @@
               <MappingFragment StoreEntitySet="UnidadMedida">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-                <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
-                <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
-                <ScalarProperty Name="estado" ColumnName="estado" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Venta">
-            <EntityTypeMapping TypeName="LabLaFormulaModel.Venta">
-              <MappingFragment StoreEntitySet="Venta">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
-                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
-                <ScalarProperty Name="fecha" ColumnName="fecha" />
-                <ScalarProperty Name="total" ColumnName="total" />
                 <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
                 <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
@@ -1043,7 +1028,6 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="paVentaRegistrar" FunctionName="LabLaFormulaModel.Store.paVentaRegistrar" />
           <EntitySetMapping Name="Cliente">
             <EntityTypeMapping TypeName="LabLaFormulaModel.Cliente">
               <MappingFragment StoreEntitySet="Cliente">
@@ -1156,6 +1140,22 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="paCompraRegistrar" FunctionName="LabLaFormulaModel.Store.paCompraRegistrar" />
+          <EntitySetMapping Name="Venta">
+            <EntityTypeMapping TypeName="LabLaFormulaModel.Venta">
+              <MappingFragment StoreEntitySet="Venta">
+                <ScalarProperty Name="pagos" ColumnName="pagos" />
+                <ScalarProperty Name="metodoPago" ColumnName="metodoPago" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+                <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

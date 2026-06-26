@@ -31,7 +31,7 @@
             // 
             this.lblNombres.AutoSize = true;
             this.lblNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombres.Location = new System.Drawing.Point(27, 138);
+            this.lblNombres.Location = new System.Drawing.Point(27, 165);
             this.lblNombres.Name = "lblNombres";
             this.lblNombres.Size = new System.Drawing.Size(77, 20);
             this.lblNombres.TabIndex = 0;
@@ -39,7 +39,7 @@
             // 
             // txtNombres
             // 
-            this.txtNombres.Location = new System.Drawing.Point(122, 140);
+            this.txtNombres.Location = new System.Drawing.Point(122, 167);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(250, 20);
             this.txtNombres.TabIndex = 1;
@@ -49,7 +49,7 @@
             // 
             this.lblApellidos.AutoSize = true;
             this.lblApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidos.Location = new System.Drawing.Point(27, 165);
+            this.lblApellidos.Location = new System.Drawing.Point(27, 192);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(77, 20);
             this.lblApellidos.TabIndex = 2;
@@ -57,7 +57,7 @@
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(122, 167);
+            this.txtApellidos.Location = new System.Drawing.Point(122, 194);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(250, 20);
             this.txtApellidos.TabIndex = 3;
@@ -67,15 +67,15 @@
             // 
             this.lblCi.AutoSize = true;
             this.lblCi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCi.Location = new System.Drawing.Point(27, 193);
+            this.lblCi.Location = new System.Drawing.Point(27, 220);
             this.lblCi.Name = "lblCi";
-            this.lblCi.Size = new System.Drawing.Size(29, 20);
+            this.lblCi.Size = new System.Drawing.Size(66, 20);
             this.lblCi.TabIndex = 4;
-            this.lblCi.Text = "CI:";
+            this.lblCi.Text = "NIT / CI:";
             // 
             // txtCi
             // 
-            this.txtCi.Location = new System.Drawing.Point(122, 195);
+            this.txtCi.Location = new System.Drawing.Point(122, 222);
             this.txtCi.Name = "txtCi";
             this.txtCi.Size = new System.Drawing.Size(250, 20);
             this.txtCi.TabIndex = 5;
@@ -85,7 +85,7 @@
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(27, 221);
+            this.lblTelefono.Location = new System.Drawing.Point(27, 248);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(75, 20);
             this.lblTelefono.TabIndex = 6;
@@ -93,7 +93,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(122, 223);
+            this.txtTelefono.Location = new System.Drawing.Point(122, 250);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(250, 20);
             this.txtTelefono.TabIndex = 7;
@@ -104,7 +104,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = global::CpLaFormula.Properties.Resources.savess;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(122, 261);
+            this.btnGuardar.Location = new System.Drawing.Point(122, 309);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(114, 42);
             this.btnGuardar.TabIndex = 8;
@@ -117,7 +117,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::CpLaFormula.Properties.Resources.cerrar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(262, 261);
+            this.btnCancelar.Location = new System.Drawing.Point(262, 309);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(110, 42);
             this.btnCancelar.TabIndex = 9;
@@ -128,7 +128,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CpLaFormula.Properties.Resources.empleados;
-            this.pictureBox1.Location = new System.Drawing.Point(204, 73);
+            this.pictureBox1.Location = new System.Drawing.Point(204, 100);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(55, 51);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -140,7 +140,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(432, 309);
+            this.ClientSize = new System.Drawing.Size(466, 395);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblNombres);
             this.Controls.Add(this.txtNombres);

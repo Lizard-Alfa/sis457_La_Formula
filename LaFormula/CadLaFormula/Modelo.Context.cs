@@ -43,8 +43,6 @@ public partial class LabLaFormulaEntities : DbContext
 
     public virtual DbSet<UnidadMedida> UnidadMedida { get; set; }
 
-    public virtual DbSet<Venta> Venta { get; set; }
-
     public virtual DbSet<VentaDetalle> VentaDetalle { get; set; }
 
     public virtual DbSet<Cliente> Cliente { get; set; }
@@ -56,6 +54,8 @@ public partial class LabLaFormulaEntities : DbContext
     public virtual DbSet<CompraDetalle> CompraDetalle { get; set; }
 
     public virtual DbSet<Proveedor> Proveedor { get; set; }
+
+    public virtual DbSet<Venta> Venta { get; set; }
 
 
     public virtual ObjectResult<paProductoListar_Result> paProductoListar(string parametro)
